@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Página Principal -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/photos-piano-vector.ico" type="image/x-icon">
+    <title>Francisco Sousa</title>
+
+    <link rel="stylesheet" href="css/font.css" />
+    <!--<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />-->
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Cabeçalho da Página -->
+    <header>
+        <div class="nav-bar">
+            <div class="logo" style="display: flex; justify-content: center; padding: 10px">
+                <div class="logo-img" style="display: flex; justify-content: center;">
+                    <img src="img/logo-francisco.png" alt="Logo1" />
+                </div>
+                <div class="logo-img" style="display: flex; justify-content: center;
+                padding: 3px; margin-top: 2px;">
+                    <img src="img/fs-keyborad.png" alt="Logo2" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo da Página -->
+    <main>
+        <div class="capa-container">
+            <img src="img/banners/ritmos-organicos-banner.webp" alt="Capa do site" />
+        </div>
+        <div class="nav">
+            <div class="cabecalho">
+                <a class="rit-yamaha" target="_self" href="ritmos-psr-e.html">PSR E-EW</a>
+                <a class="rit-yamaha" target="_self" href="psr-s-sx-genos-tyros.html">PSR S-SX-GENOS-TYROS</a>
+            </div>
+            <div class="cabecalho">
+                <!--<a class="rit-yamaha" target="next" href="#" id="btn1Menu">PSR S-SX-GENOS-TYROS</a>-->
+                <!--<a class="rit-yamaha" href="https://www.mediafire.com/folder/f09vo3nw78d89/Vinhetas" target="_blank" rel="external">Vinhetas</a>-->
+                <a class="rit-yamaha" href="samples.html" target="_self" rel="next">Samples</a>
+            </div>
+        </div>
+        <hr>
+
+        <!-- BOTÃO PARA ABRIR O MENU -->
+        <!--<a href="#" id="btnMenu" class="menu-button">☰ Menu</a>-->
+
+        <!-- POPUP (FUNDO ESCURO) -->
+        <div id="popupMenu" class="popup-container">
+            <div class="popup-box">
+                <button id="btnFecharMenu" class="fecharMenu">&#x2716</button>
+                <iframe id="popupFrame" src="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Ritmos Yamaha PSR E-EW -->
+        <section>
+            <div class="sessao-a">
+                <div class="rit-psr">
+                    <h1 style="color: white; font-size: 1.2em;">Ritmos Yamaha PSR E-EW</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="sessao-a">
+                <div class="lista-produtos" id="grupo-de-ritmos" style="max-width: 1500px;">
+
+                    <!-- Produto 1 -->
+                    <div class="produto" data-nome="Arrasta Pé">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/0a_user_no_photo.png" alt="Produto">
+                        <!-- Nome e preço -->
+                        <div class="produto-info">
+                            <p class="titulo">Arrasta Pé</p>
+                            <p class="preco">R$ 14,90</p>
+                        </div>
+                        <!-- Botões -->
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'arrasta-pe')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Arrasta Pé" data-preco="14,90"
+                                data-teclado="PSR-E-EW" data-imagem="img/ritmos/0a_user_no_photo.png"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="arrasta-pe"
+                            src="https://dl.dropboxusercontent.com/scl/fi/wkbrn5b2g17krljt8283e/01_Arrasta_Pe.mp3?rlkey=5as9acx1hag8iji50dlrb2z98&st=zgkbgait&raw=1"></audio>
+
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class="produto" data-nome="Arrocha Básico">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/0a_user_no_photo.png" alt="Produto" />
+                        <div class="produto-info">
+                            <!-- Nome e preço -->
+                            <p class="titulo">Arrocha Básico</p>
+                            <p class="preco">R$ 14,90</p>
+                        </div>
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'arrocha_basico')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Arrocha Básico" data-preco="14,90"
+                                data-teclado="PSR-E-EW" data-imagem="img/ritmos/0a_user_no_photo.png"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="arrocha_basico"
+                            src="https://dl.dropboxusercontent.com/scl/fi/j1ov1jqtky5c3est1z0b4/02_Arrocha_Basico.mp3?rlkey=h3vbbpmmuw5z3eecyo9moqmzw&st=4max3s3w&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="produto" data-nome="Baião">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/0a_user_no_photo.png" alt="Produto" />
+                        <div class="produto-info">
+                            <!-- Nome e preço -->
+                            <p class="titulo">Baião</p>
+                            <p class="preco">R$ 19,90</p>
+                        </div>
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'baiao')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Baião" data-preco="19,90" data-teclado="PSR-E-EW"
+                                data-imagem="img/ritmos/0a_user_no_photo.png" onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="baiao"
+                            src="https://dl.dropboxusercontent.com/scl/fi/av6ttj4tj1whr756vzn4u/03_Baiao.mp3?rlkey=ydz5kf5k58tuirtbjt57z6p4l&st=b63wqt9z&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 4 -->
+                    <div class="produto" data-nome="Forró Paredão">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/0a_user_no_photo.png" alt="Produto" />
+                        <div class="produto-info">
+                            <!-- Nome e preço -->
+                            <p class="titulo">Forró Paredão</p>
+                            <p class="preco">R$ 19,90</p>
+                        </div>
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'forro_paredao')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Forró Paredão" data-preco="19,90"
+                                data-teclado="PSR-E-EW" data-imagem="img/ritmos/0a_user_no_photo.png"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="forro_paredao"
+                            src="https://dl.dropboxusercontent.com/scl/fi/f3nbydcteu63fz6h4wsxr/04_Forro_Paredao.mp3?rlkey=s3np033cf498gow7hw9lyygec&st=6qx0ym80&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="produto" data-nome="Forró Maranhão">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/0a_user_no_photo.png" alt="Produto" />
+                        <div class="produto-info">
+                            <!-- Nome e preço -->
+                            <p class="titulo">Forró Maranhão</p>
+                            <p class="preco">R$ 19,90</p>
+                        </div>
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'forro_mr')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Forró Maranhão" data-preco="19,90"
+                                data-teclado="PSR-E-EW" data-imagem="img/ritmos/0a_user_no_photo.png"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="forro_mr"
+                            src="https://dl.dropboxusercontent.com/scl/fi/8f5yuvcf1x7590vm2sib1/05_Forro_Maranhao.mp3?rlkey=9kfkei5xavvt9iwxfeyxxj4xl&st=f6g8n2hv&raw=1"></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="sessao-a">
+                <div class="rit-psr">
+                    <a style="margin-left: 0px;" class="rit-yamaha" href="ritmos-psr-e.html">Ver mais</a>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <!-- Ritmos Yamaha PSR S SX GENOS TYROS -->
+        <section>
+            <div class="sessao-b">
+                <div class="rit-psr">
+                    <h1 style="color: white; font-size: 1.2em;">Ritmos Yamaha PSR S-SX-Genos-Tyros</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="sessao-b">
+                <div class="lista-produtos" id="grupo-de-ritmos" style="max-width: 1500px;">
+
+                    <!-- Produto 1 -->
+                    <div class="produto" data-nome="Seresta do Rasta">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/seresta_rasta.webp" alt="Produto">
+                        <!-- Nome e preço -->
+                        <div class="produto-info">
+                            <p class="titulo">Seresta do Rasta</p>
+                            <p class="preco">R$ 19,90</p>
+                        </div>
+                        <!-- Botões -->
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'rasta')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Seresta do Rasta" data-preco="19,90"
+                            data-teclado="PSR-S-SX-Genos-Tyros"
+                            data-imagem="img/ritmos/seresta_rasta.webp"
+                            onclick="abrirCheckoutComDados(this)">
+                            Comprar
+                        </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="rasta" src="https://dl.dropboxusercontent.com/scl/fi/mk88s1ead2nh66ckdsp4c/017_Seresta_Rasta.mp3?rlkey=e2l0ui6suwzf7dafnagi63l1o&st=iyvo91oa&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class="produto" data-nome="Zé Armando Cantor">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/ze-armando-ct-img.webp" alt="Produto">
+                        <!-- Nome e preço -->
+                        <div class="produto-info">
+                            <p class="titulo">Zé Armando Cantor</p>
+                            <p class="preco">R$ 19,90</p>
+                        </div>
+                        <!-- Botões -->
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'ze-armando')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Zé Armando Cantor" data-preco="19,90"
+                                data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/ze-armando-ct-img.webp"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="ze-armando"
+                            src="https://dl.dropboxusercontent.com/scl/fi/bfzbijaqo2bjm0l2cf97z/011_Ze_Armando_Cantor.mp3?rlkey=16h66rns00ti90lbntz7rk6qd&st=o2tuw9r1&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="produto" data-nome="Arrocha Top">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/arrocha-top-img.webp" alt="Produto">
+                        <!-- Nome e preço -->
+                        <div class="produto-info">
+                            <p class="titulo">Arrocha Top</p>
+                            <p class="preco">R$ 24,90</p>
+                        </div>
+                        <!-- Botões -->
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'arrocha-top')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Arrocha Top" data-preco="24,90"
+                                data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/arrocha-top-img.webp"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="arrocha-top"
+                            src="https://dl.dropboxusercontent.com/scl/fi/c1ererm1jnoc6hknkdgeq/007_Arrocha_Top.mp3?rlkey=97ps4fv57hedxw631859v3ql6&st=sz5032z1&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 4 -->
+                    <div class="produto" data-nome="Léo Magalhaes">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/leo-magalhaes-img.webp" alt="Produto">
+                        <!-- Nome e preço -->
+                        <div class="produto-info">
+                            <p class="titulo">Léo Magalhaes</p>
+                            <p class="preco">R$ 14,90</p>
+                        </div>
+                        <!-- Botões -->
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'leo-mag')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Léo Magalhaes" data-preco="14,90"
+                                data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/leo-magalhaes-img.webp"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="leo-mag"
+                            src="https://dl.dropboxusercontent.com/scl/fi/fcbv3zevmr4s1h47c2mhd/004_Leo_Magalhaes.mp3?rlkey=i0zluypqhk256lo22wl266ni9&st=vybxtwza&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="produto" data-nome="Forró das Antigas">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/forro-das-antigas-img.webp" alt="Produto">
+                        <!-- Nome e preço -->
+                        <div class="produto-info">
+                            <p class="titulo">Forró das Antigas</p>
+                            <p class="preco">R$ 19,90</p>
+                        </div>
+                        <!-- Botões -->
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'forro-antigas')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Forró das Antigas" data-preco="19,90"
+                                data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/forro-das-antigas-img.webp"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="forro-antigas"
+                            src="https://dl.dropboxusercontent.com/scl/fi/90wjnpjiu77hzcvxeip1t/001_Forro_das_Antigas.mp3?rlkey=ek9dg92a6medjh1nxo7u6ipha&st=uu2hjk0q&raw=1"></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="sessao-b">
+                <div class="rit-psr">
+                    <!--<a style="margin-left: 0px;" class="rit-yamaha" href="#" id="btn2Menu">Ver mais</a>-->
+                    <a class="rit-yamaha" target="_self" href="psr-s-sx-genos-tyros.html">Ver mais</a>
+                </div>
+            </div>
+        </section>
+
+        <aside class="informacoes"
+            style="display: flex; height: max-content; width: 100%; color: white; font-family: Poppins; font-size: 12px; justify-content: center; align-items: center;">
+
+            <div
+                style="display: flex;  flex-direction: column; width: 1500px; align-items: start; justify-content: start; padding: 20px 0px 20px 15px;">
+
+                <!--<h1>Importante:</h1>
+                <br>
+                <p>Antes de adquirir qualquer ritmo, <br>
+                    selecione o modelo correto do seu teclado no menu flutuante.
+                </p> <br>
+                <p>Alguns ritmos poderão não funcionar corretamente nos teclados <br>
+                    Yamaha PSR S500, S700, S900, Tyros 1 e Tyros 2. <br> <br>
+                    Isso porque os mesmos não têm os kits de bateria: <br>
+                    <code style="font-family: monospace; font-size: 12px;">
+                        Power Kit 1 - MSB-127 LSB-0 PC-88 - S500-Tyros1 <br>
+                        AnalogT8Kit	- MSB-127 LSB-0 PC-59 - S500-S700-S900-Tyros1-Tyros2
+                    </code> <br> Usados em alguns ritmos. <br> <br>
+                    Portanto, os mesmos que usarem esses timbres de bateria, funcionarão com <br>
+                    <code style="font-family: monospace; font-size: 12px;">
+                        Standard Kit 1 - MSB-127 LSB-0 PC-0
+                    </code><br>comum a todos os teclados Yamaha.
+                </p>
+                <br>
+                <h3>&#x1F4DD Nota:</h3>
+                <p>Esses teclados acima mencionados, terão menos ritmos disponíveis.</p>
+
+                <br>-->
+                <h2>&#x26A0 Aviso:</h2>
+                <p>
+                    Os áudios de demontração foram gravados a partir do teclado Yamaha PSR-E463.
+                    <br>Portanto, apresentam sonoridade diferente de teclados superiores como PSR S e SX.
+                    <br>Esses ritmos não possuem timbres configurados no OTS (One Touch Settings).
+                </p>
+            </div>
+        </aside>
+        <hr>
+    </main>
+
+    <footer>
+        <div class="roda-pe">
+            <div class="element-group">
+                <p style=" font-size: 15px; padding: 20px 0px 10px 0px;">Suporte:</p>
+                <a class="contato"
+                    href="https://api.whatsapp.com/send/?phone=5583999576320&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <img style="height: 24px; width: 24px;" src="img/icon-whatsapp.png" alt="whatsapp_icone">
+                    <p style="padding: 10px;">WhatsApp</p>
+                </a>
+                <p style="font-size: 12px; padding: 20px 0px 10px 0px;">Copyright &copy; 2026, Francisco Sousa</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="js/audio-play.js"></script>
+<script src="js/abrir-checkout.js"></script>
+
+<script src="js/abrir-menu.js"></script>
+
+<!-- Checkout -->
+<div id="overlay">
+    <div id="popup-checkout">
+        <button class="fechar" onclick="fecharCheckout()">&#x2716</button> <!--✖-->
+
+        <div class="product-info">
+            <img id="popup-imagem" src="" alt="Produto" />
+            <h2 id="popup-nome"></h2>
+            <p id="popup-preco"></p>
+        </div>
+        <hr>
+
+        <form id="form-checkout">
+            <label for="nome">Como devemos te chamar?</label>
+            <input type="text" id="nome" placeholder="Seu nome e sobrenome" required />
+
+            <label for="whatsapp">WhatsApp (com DDD):</label>
+            <input type="tel" id="whatsapp" placeholder="Ex: 11987654321" required />
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Insira um e-mail válido" required />
+
+            <hr>
+            <div class="mensagem">
+                <p>
+                    Após a confirmação do pagamento, o <strong>RITMO</strong> será enviado para o seu WhatsApp ou por
+                    e-mail!
+                </p>
+            </div>
+
+            <button type="submit" id="btn-finalizar" onclick="enviarEmailCheckout(onFinish)">FINALIZAR COMPRA</button>
+
+            <!-- Mensagem de retorno ao usuário -->
+            <div id="mensagem-status" style="margin-top: 15px; font-size: 14px"></div>
+        </form>
+    </div>
+</div>
+
+<script src="js/confirmacao.js"></script>
+<script src="js/enviar-email-checkout.js"></script>
+
+</html>

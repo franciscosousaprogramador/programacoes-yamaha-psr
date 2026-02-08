@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/compra.ico" type="image/x-icon">
+    <title>Confirmação de Pedido</title>
+
+    <link rel="stylesheet" href="css/font.css" />
+    <!--<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />-->
+    <link rel="stylesheet" href="css/confirmacao.css" />
+
+    <script src="js/qrcode-min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>-->
+</head>
+
+<body>
+    <div class="container">
+        <img id="produto-imagem" class="produto-imagem" src="" alt="Produto" style="height: 0px;" />
+
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%; height: 48px;">
+            <img style="height: 24px; width: 24px; padding: 10px;" src="img/confirmation.ico" alt="Selo de Confirmação">
+            <h2>Pedido Recebido!</h2>
+        </div>
+        
+        <p>
+            Obrigado, <strong id="cliente-nome"></strong>! Seu pedido do ritmo
+            <strong id="produto-nome"></strong> no valor de
+            <strong id="produto-preco"></strong> foi registrado.
+        </p>
+        <p>
+            Enviaremos o seu ritmo para o seu WhatsApp ou E-mail em até 24h após o pagamento.
+        </p>
+        <p style="font-size: 0px; margin-top: -10px;">
+            <strong id="cliente-whatsapp"></strong>
+            <strong id="cliente-email"></strong>
+        </p>
+        <hr>
+
+        <p>Código Pix (copia e cola):</p>
+        <div class="codigo-box" id="codigo-pix">Carregando...</div>
+        <button class="btn-copiar" onclick="copiarCodigo()">📋 Copiar Código</button>
+
+        <div id="qr-container">
+            <p style="margin-top: 10px;">QR Code:</p>
+            <img id="qr-code" class="qr-code" src="" alt="QR Code Pix" />
+        </div>
+        <hr>
+        <!-- Botão para confirmar que já pagou -->
+        <!--<button class="btn-confirmar" onclick="enviarParaWhatsapp()">✅ Já paguei – Enviar dados via WhatsApp</button>
+        -->
+
+        <div>
+            <button class="btn-confirmar" onclick="enviarEmail()">✅ Já paguei - Enviar Confirmação</button>
+        </div>
+
+        <!--<button class="btn-voltar" onclick="window.location.href='index.html'">&leftarrow; Voltar para o Site</button>-->
+        <button class="btn-voltar" onclick="window.history.back()">&leftarrow; Voltar para o Site</button>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nome = params.get('nome');
+        const whatsapp = params.get('whatsapp');
+        const email = params.get('email');
+        const produto = params.get('produto');
+        const preco = params.get('preco');
+        const imagem = params.get('imagem');
+
+        document.getElementById('cliente-nome').textContent = nome || 'Cliente';
+        document.getElementById('cliente-whatsapp').textContent = whatsapp || 'Não informado';
+        document.getElementById('cliente-email').textContent = email || 'Não informado';
+        document.getElementById('produto-nome').textContent = produto || 'Produto';
+        document.getElementById('produto-imagem').src = imagem || '';
+
+        // Formatar preço
+        let precoLimpo = preco?.replace(',', '.').replace(/[^0-9.]/g, '');
+        let valorNumerico = parseFloat(precoLimpo);
+        if (!isNaN(valorNumerico)) {
+            const precoFormatado = valorNumerico.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            });
+            document.getElementById('produto-preco').textContent = precoFormatado;
+        } else {
+            document.getElementById('produto-preco').textContent = 'Valor não informado';
+        }
+
+        // Normalizar nome do produto para evitar erros com acentos
+        const produtoNormalizado = produto?.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
+
+        const produtosPix14_90 = [
+            //Ritmos PSR S-SX
+            "cachorrinho do brega",
+            "leo magalhaes",
+            "silvanno salles",
+            "ze vaqueiro",
+            "marcynho reggaeton",
+
+            //Ritmos PSX E-EW
+            "arrasta pe",
+            "arrocha basico",
+        ];
+        const produtosPix19_90 = [
+            //Ritmos PSR S-SX
+            "forro das antigas",
+            "nito do zoto",
+            "chicao do piseiro",
+            "mumuzin do piseiro",
+            "ramonzin lapada",
+            "ze armando cantor",
+            "mimin do gado",
+            "rikinho cantor",
+            "ze da vea",
+            "seresta do rasta",
+            "mikael santos",
+            "japaozin eletrico",
+            "kara veia",
+
+            //Ritmos PSX E-EW
+            "baiao",
+            "forro paredao",
+            "forro maranhao",
+            "forro romantico",
+            "piseiro paredao",
+        ];
+        const produtosPix24_90 = [
+            "arrocha top",
+            "emily vaqueira",
+            "wesley vaquejada",
+            "feras do pizeiro",
+        ];
+
+        const produtosPix67_00 = [
+            "pack sample 2026 v1"
+        ];        
+
+        const codigoPix14_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a520400005303986540514.905802BR5925Francisco de Sousa Tavare6009SAO PAULO621405102v0ekgx7tU6304892F";
+
+        const codigoPix19_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a520400005303986540519.905802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510ixKyQbpXaB63041481";
+
+        const codigoPix24_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a520400005303986540524.905802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510Z6MFq9N5M16304E6F9";
+
+        const codigoPix67_00 = "00020126810014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a0219PACK Sample 2026 V1520400005303986540567.005802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510Ig74DH4yE963041CC1";
+        
+        let codigoPix = "Código não encontrado";
+        if (produtosPix14_90.includes(produtoNormalizado)) {
+            codigoPix = codigoPix14_90;
+        } else
+        if (produtosPix19_90.includes(produtoNormalizado)) {
+            codigoPix = codigoPix19_90;
+        } else
+        if (produtosPix24_90.includes(produtoNormalizado)) {
+            codigoPix = codigoPix24_90;
+        } else
+        if (produtosPix67_00.includes(produtoNormalizado)) {
+            codigoPix = codigoPix67_00;
+        }
+
+        document.getElementById('codigo-pix').textContent = codigoPix;
+
+        // Gerar QR Code com a biblioteca QRCode.js
+        if (codigoPix !== 'Código não encontrado') {
+            QRCode.toDataURL(codigoPix, function (err, url) {
+                if (err) {
+                    console.error("Erro ao gerar QR Code:", err);
+                    document.getElementById('qr-code').alt = "Erro ao gerar QR Code";
+                } else {
+                    document.getElementById('qr-code').src = url;
+                }
+            });
+        } else {
+            document.getElementById('qr-code').alt = "QR Code indisponível";
+        }
+
+        // Função copiar código
+        function copiarCodigo() {
+            const texto = document.getElementById('codigo-pix').textContent;
+            navigator.clipboard.writeText(texto).then(() => {
+                alert("Código Pix copiado!");
+            }).catch(() => {
+                alert("Erro ao copiar o código Pix.");
+            });
+        }
+
+        // Função para enviar dados via WhatsApp
+        function enviarParaWhatsapp() {
+            const numeroDestino = "5583999576320"; // <-- SUBSTITUA PELO SEU NÚMERO
+            const mensagem = `Olá, já realizei o pagamento do produto!\n\nNome: ${nome}\nWhatsApp: ${whatsapp}\nProduto: ${produto}\nValor: R$ ${preco}`;
+            const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+    <script src="js/enviar-email.js"></script>
+</body>
+
+</html>

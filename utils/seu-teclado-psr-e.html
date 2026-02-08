@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o seu teclado</title>
+    <link rel="stylesheet" href="../css/font.css">
+    <base target="_top">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        font-family: Poppins;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .qual-seu-teclado {
+        display: flex;
+        background-color: #001;
+        box-shadow: 0 0px 5px rgba(0, 150, 220, 0.3);
+        flex-direction: column;
+        height: max-content;
+        width: 330px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #005;
+        border-radius: 8px;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-tec {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+        background-color: #22C55E;
+        color: white;
+        text-decoration: none;
+        font-size: 10pt;
+        padding: 5px;
+        border-radius: 100px;
+        transition: color 200ms;
+        background: 200ms;
+    }
+
+    .btn-tec:hover {
+        color: rgb(5, 46, 22);
+        background-color: rgb(74, 222, 128);
+        transition: color 200ms;
+        background: 200ms;
+    }
+</style>
+
+<body style="background-color: transparent;">
+    <main>
+        <div class="qual-seu-teclado" id="seu-teclado-psr-e">
+            <div style="display: flex; width: 330px; justify-content: space-between;">
+                <p>Qual o seu teclado?</p>
+            </div>
+
+            <hr style="width: 330px;">
+            <p style="align-items: start; width:320px;">PSR E</p>
+            <div class="section">
+                <a class="btn-tec" href="../ritmos-psr-e.html">E-433</a>
+                <a class="btn-tec" href="../ritmos-psr-e.html">E-443</a>
+                <a class="btn-tec" href="../ritmos-psr-e.html">E-453</a>
+                <a class="btn-tec" href="../ritmos-psr-e.html">EW-400</a>
+            </div>
+            <div class="section">
+                <a class="btn-tec" href="../ritmos-psr-e.html">E-463</a>
+                <a class="btn-tec" href="../ritmos-psr-e.html">EW-410</a>
+                <a class="btn-tec" href="../ritmos-psr-e.html">E-473</a>
+                <a class="btn-tec" href="../ritmos-psr-e.html">EW-425</a>
+            </div>
+            <p style="align-items: start; width:320px;">Novos</p>
+            <div class="section">
+                <a class="btn-tec" href="../ritmos-psr-e.html">E-483</a>
+                <a class="btn-tec" href="../ritmos-psr-e.html">E-583</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

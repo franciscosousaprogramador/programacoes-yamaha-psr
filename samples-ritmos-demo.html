@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="shortcut icon" href="img/photos-piano-vector.ico" type="image/x-icon">
+    <title>Francisco Sousa</title>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="logo" style="display: flex; justify-content: center; padding: 10px">
+                <div class="logo-img" style="display: flex; justify-content: center;">
+                    <img src="img/logo-francisco.png" alt="Logo1" />
+                </div>
+                <div class="logo-img" style="display: flex; justify-content: center;
+                padding: 3px; margin-top: 2px;">
+                    <img src="img/fs-keyborad.png" alt="Logo2" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main style="color: white;">
+        <div style="margin-top: 70px;"></div>
+
+        <!-- Banner do site -->
+        <div class="capa-container">
+            <img src="img/banners/pack-sample-2026-v1.webp" alt="Capa do site"/>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: center; width: 100%; height: max-content; margin: 10px auto 20px auto; background-image: linear-gradient(to bottom, blue, black);">
+            <p style="width: 100%; text-align: center; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: poppins; background-image: linear-gradient(to bottom, blue, black);">
+                Adquirir Pack Sample
+            </p>
+            <div style="display: flex; flex-direction: row; width: 100%; height: max-content; justify-content: center; background-image: linear-gradient(to right, black, blue, black); padding: 0px; gap: 5px;">
+                <a class="rit-yamaha" id="btn-comprar-sample-s670"
+                    style="cursor: pointer; box-shadow: 1px 1px 5px black;"
+                    data-nome="Pack Sample 2026 V1"
+                    data-teclado="PSR-S670"
+                    data-preco="67,00"
+                    data-imagem="img/img_tumb_pack_sample_2026_v1.webp"
+                    onclick="abrirCheckoutComDados(this)">
+                    PSR-S670
+                </a>
+    
+                <a class="rit-yamaha" id="btn-comprar-sample-sx600"
+                    style="cursor: pointer; box-shadow: 1px 1px 5px black;"
+                    data-nome="Pack Sample 2026 V1"
+                    data-teclado="PSR-SX600"
+                    data-preco="67,00"
+                    data-imagem="img/img_tumb_pack_sample_2026_v1.webp"
+                    onclick="abrirCheckoutComDados(this)">
+                    PSR-SX600
+                </a>
+            </div>
+        </div>
+
+        <!-- Lista de ritmos -->
+        <div class="lista-produtos-sample" id="grupo-de-ritmos">
+        
+            <div class="produto" data-nome="Amado Batista">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_4375b66b056c446fa34501c50c9ce20c~mv2.webp/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_4375b66b056c446fa34501c50c9ce20c~mv2.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Amado Batista</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'amado_batista')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="amado_batista"
+                    src="https://dl.dropbox.com/scl/fi/hvnhunyjfb2qzrwcp27md/Amado_Batista-Demo.mp3?rlkey=f5ttdvo3p6jkh9ut4jw9dmse0&st=ojbbscgj&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Arrasta Pé">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_4ee80e222825405ea199964ae25dbdff~mv2.webp/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_4ee80e222825405ea199964ae25dbdff~mv2.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Arrasta Pé</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'arrasta_pe')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="arrasta_pe"
+                    src="https://dl.dropboxusercontent.com/scl/fi/wemfm26vgq8swm3ogd75v/Arrasta_P-Demo.mp3?rlkey=3k2aqiaci5e81f5iiteob0ess&st=bw6tiiah&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Axé Elétrico">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_1d4aea628c874a8e8d4153e6eb397b3c~mv2.jpeg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_1d4aea628c874a8e8d4153e6eb397b3c~mv2.jpeg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Axé Elétrico</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button  class="btn-play" onclick="tocarOuPausar(this, 'axe_eletrico')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="axe_eletrico"
+                    src="https://dl.dropboxusercontent.com/scl/fi/p8wkmswcaudj5geijr609/Ax-_El-trico-Demo.mp3?rlkey=syzvo8j06gbv2ixm681pg818j&st=pclr5bwr&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Baião Mastruz">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/baiao-mastruz.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Baião Mastruz</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'baião_mastruz')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="baião_mastruz"
+                    src="https://dl.dropboxusercontent.com/scl/fi/1xd4lx8h6hqxlssl2yaam/Bai-o_Mastruz-Demo.mp3?rlkey=jdpq7gph7hrd0vcfwez0scn90&st=kxltuh7k&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Banda 100 Parea">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_cfadb2fed2cc46e7a8e084bd5a25fb7c~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_cfadb2fed2cc46e7a8e084bd5a25fb7c~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Banda 100 Parea</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'banda_100parea')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="banda_100parea"
+                    src="https://dl.dropbox.com/scl/fi/0j2p3jaziuobkagjnfwnc/Banda_100Parea-Demo.mp3?rlkey=lmdxmg143jr4l3rqp7ngi035p&st=5boc7miw&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Barões da Pisadinha">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_05c7b47b95dd4d28ad16be53c93dc04d~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_05c7b47b95dd4d28ad16be53c93dc04d~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Barões da Pisadinha</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'baroes_da_pisadinha')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="baroes_da_pisadinha"
+                    src="https://dl.dropboxusercontent.com/scl/fi/s0lva5p8c2gi9eka3nsba/Bar-es_da_Pisadinha-Demo.mp3?rlkey=mxkoeri446x7laus3yjjjd5al&st=8wd2gw9c&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Biguinho Sensação">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_ccdd44d487b94529bdba8536e72ae113~mv2.jpeg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_ccdd44d487b94529bdba8536e72ae113~mv2.jpeg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Biguinho Sensação</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'biguinho_sensacao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="biguinho_sensacao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/lehvey299k2etgfdi0s3h/Biguinho_Sensa-o-Demo.mp3?rlkey=0ujdt5e6p3ddubclfx9cvxrgy&st=ng85jx4l&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Biu do Piseiro">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_63d3f3b1d01443c7820c4653bf4f6537~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_63d3f3b1d01443c7820c4653bf4f6537~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Biu do Piseiro</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'biu_d_piseiro')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="biu_d_piseiro"
+                    src="https://dl.dropboxusercontent.com/scl/fi/5mpjso7t156i9wb1ojolh/Biu_do_Piseiro-Demo.mp3?rlkey=pn0d6lvn2pn3io0iqwit25zga&st=ukpo4pdb&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Bonde do Forró">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/bondedForro.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Bonde do Forró</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'bonde_do_forro')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="bonde_do_forro"
+                    src="https://dl.dropboxusercontent.com/scl/fi/av80lvqewksxpo6r8h6nl/Bonde_do_Forr-Demo.mp3?rlkey=s2a4r45bb9pdky2yabxku3pls&st=75jumt12&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Bregadeira">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/bregadeira.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Bregadeira</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'bregadeira')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="bregadeira"
+                    src="https://dl.dropboxusercontent.com/scl/fi/ern5i0s9gpwrbeekp065b/Bregadeira-Demo.mp3?rlkey=wjzdvdb00ep0it0t1x1n0fsex&st=ll4fdzgg&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Caio Costta">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_2628c6978ebd424187bc3c886b05f116~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_2628c6978ebd424187bc3c886b05f116~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Caio Costta</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'caio_costta')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="caio_costta"
+                    src="https://dl.dropboxusercontent.com/scl/fi/7rjghpdry1kuhpk0jnsdv/Caio_Costta-Demo.mp3?rlkey=tfmif2pwtj2kf43x79quhpqfp&st=td021e5k&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Canários">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/canarios.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Canários</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'canarios')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="canarios"
+                    src="https://dl.dropboxusercontent.com/scl/fi/dkc8vy2oonkhepquwo95d/Can-rios-Demo.mp3?rlkey=1my9uokat43tacaavo5mcevb1&st=f9apxyeh&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Chicabana">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_9bee1d11ed8947e089e30f78d2e05198~mv2.jpg/v1/fill/w_38,h_37,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_9bee1d11ed8947e089e30f78d2e05198~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Chicabana</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'chicabana')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="chicabana"
+                    src="https://dl.dropboxusercontent.com/scl/fi/33x4fj7geo1tnn0y0bjnr/Chicabana-Demo.mp3?rlkey=y8xw4povrem7hcbk4xhu4bvc6&st=trk3hkmr&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Cumbia">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/cumbia.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Cumbia</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'cumbia')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="cumbia"
+                    src="https://dl.dropboxusercontent.com/scl/fi/l66wb1bioye16lmmqm272/Cumbia-Demo.mp3?rlkey=5iyiynqkxmmz1b7xf5xxjl8ke&st=zsd8x1hm&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Desejo de Menina">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_b062e73713184f4fa3ebbf121bd6cd28~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_b062e73713184f4fa3ebbf121bd6cd28~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Desejo de Menina</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'desejo_de_menona')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="desejo_de_menona"
+                    src="https://dl.dropboxusercontent.com/scl/fi/dx5x5ktt2lawi16qaoz6a/Desejo_de_Menina-Demo.mp3?rlkey=1r6480r7jrnty45nmjszhpalf&st=ry0c1is9&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="DJ Maluco">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/djmaluco.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">DJ Maluco</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'dj_maluco')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="dj_maluco"
+                    src="https://dl.dropbox.com/scl/fi/skzcglfsnff5dcce5siqp/Dj_Maluco-Demo.mp3?rlkey=9npymnj7t0sqghmdwgk5t9gjp&st=rkirk699&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Elias Monkbel">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_79389b8192ee407e8ad766e56b35c666~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_79389b8192ee407e8ad766e56b35c666~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Elias Monkbel</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'elias_monkbel')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="elias_monkbel"
+                    src="https://dl.dropboxusercontent.com/scl/fi/zvpncsijapo8jkcy0zb8c/Elias_Monkbel-Demo.mp3?rlkey=x7qfct58twr9y14v58noeplqx&st=8ccleexb&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Flaguim Moral">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_38723a7e480c4de8890b72c7e07c3a95~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_38723a7e480c4de8890b72c7e07c3a95~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Flaguim Moral</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'flaguim_moral')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="flaguim_moral"
+                    src="https://dl.dropboxusercontent.com/scl/fi/la38l6df47063kp492tox/Flaguim_Moral-Demo.mp3?rlkey=oyf6ey9fg4tutigg9quwgbzpx&st=bvk9mx8r&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Forró Boys">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_c6b82415bbeb4c3cbd65efaf53eee582~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_c6b82415bbeb4c3cbd65efaf53eee582~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Forró Boys</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'forro_boys')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="forro_boys"
+                    src="https://dl.dropboxusercontent.com/scl/fi/qx2n07pwuk33a6v7wwwj3/Forr-_Boys-Demo.mp3?rlkey=mqevude6iuhtt63n4gaqwgdr5&st=abwr77qo&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Forró das Antigas">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_aa9826ab998f4ed9a6c1aa45aae15735~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_aa9826ab998f4ed9a6c1aa45aae15735~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Forró das Antigas</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'forro_das_antigas')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="forro_das_antigas"
+                    src="https://dl.dropboxusercontent.com/scl/fi/i9i15ka3hom6dbsnkpcyu/Forr-_das_Antigas-Demo.mp3?rlkey=e0qiv5phuxdkis6xzmsmfqv7a&st=pdgod9xw&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Forró do Maranhão">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_aa9826ab998f4ed9a6c1aa45aae15735~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_aa9826ab998f4ed9a6c1aa45aae15735~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Forró do Maranhão</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'forro_do_maranhao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="forro_do_maranhao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/1s12kvo74a3woft5jfzq1/Forr-_do_Maranh-o-Demo.mp3?rlkey=qzumdo341uez7fki0sm5zv65t&st=yuzd5kes&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Forró Perfeito">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/forroperfeito.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Forró Perfeito</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'forro_perfeito')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="forro_perfeito"
+                    src="https://dl.dropboxusercontent.com/scl/fi/je4yxj2vt4skwe8r7bjmu/Forr-_Perfeito-Demo.mp3?rlkey=gw5qffnq9ny6ctlhlbxpdxgtx&st=qb3ytnf0&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Forrozão Boys">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_c6b82415bbeb4c3cbd65efaf53eee582~mv2.jpg/v1/fill/w_32,h_32,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_c6b82415bbeb4c3cbd65efaf53eee582~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Forrozão Boys</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'forrozao_boys')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="forrozao_boys"
+                    src="https://dl.dropboxusercontent.com/scl/fi/v505vdvceqthztyg2cmt0/Forroz-o_Boys-Demo.mp3?rlkey=dyjq9umy1e4v77mmvsvgn3k4b&st=2jur2d7j&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Gasparzinho">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/gasparzinho.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Gasparzinho</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'gasparzinho')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="gasparzinho"
+                    src="https://dl.dropboxusercontent.com/scl/fi/cjyoqf25g44rki6b8dk1a/Gasparzinho-Demo.mp3?rlkey=e7yr84gto4b0a9x733hyvk3iq&st=kakwkf7e&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Guarânia Sertaneja">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_78ddd8b8329a406e89eb7eeb5b500a4e~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_78ddd8b8329a406e89eb7eeb5b500a4e~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Guarânia Sertaneja</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'guarania')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="guarania"
+                    src="https://dl.dropboxusercontent.com/scl/fi/w4l2fcz69t8lxooe8qg2z/Guar-nia-Demo.mp3?rlkey=estwk54j9xw8vsr0b8p41ynqd&st=fh9w5wjk&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Guilherme Silva">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_a57db5c2bc26405995380fc49554b155~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_a57db5c2bc26405995380fc49554b155~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Guilherme Silva</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'guilherme_silva')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="guilherme_silva"
+                    src="https://dl.dropboxusercontent.com/scl/fi/oirxdanzx3gul82uw0x47/Guilherme_Silva-Demo.mp3?rlkey=49bngmeinew6w8bq7kayj24b1&st=apba11n7&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Iguinho&amp;Lulinha Lento">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_5d6079db627f497b9dd642239cdc8d2b~mv2.png/v1/fill/w_39,h_38,al_c,q_85,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_5d6079db627f497b9dd642239cdc8d2b~mv2.png"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Iguinho&amp;Lulinha Lento</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'igui&luli_lent')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="igui&luli_lent"
+                    src="https://dl.dropboxusercontent.com/scl/fi/nr716xhcdeo9o1l0dodb1/Igui-Luli_Lento-Demo.mp3?rlkey=tuiejkqfmsq0sugddiq86r95k&st=hntb58ll&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Iguinho &amp; Lulinha">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_5d6079db627f497b9dd642239cdc8d2b~mv2.png/v1/fill/w_39,h_38,al_c,q_85,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_5d6079db627f497b9dd642239cdc8d2b~mv2.png"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Iguinho &amp; Lulinha</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'igui_e_luli_rap')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="igui_e_luli_rap"
+                    src="https://dl.dropboxusercontent.com/scl/fi/g0vlf38uwi1jrfs70zyqv/Iguinho-Lulinha-Demo.mp3?rlkey=os4eofsxhgpxzv1lzvgen27b1&st=nxdehugz&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Japãozin">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_1db9b0ca4ff74bf3ba51b71f42796d49~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_1db9b0ca4ff74bf3ba51b71f42796d49~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Japãozin</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'japaozin')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="japaozin"
+                    src="https://dl.dropboxusercontent.com/scl/fi/p530cl6m6n8xy65he3qf8/Jap-ozin-Demo.mp3?rlkey=ju12u6b9dos1jc175bugft9av&st=t2c9xtex&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="João Gomes">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_9d68cd5df15c45eab90106bfc075d43c~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_9d68cd5df15c45eab90106bfc075d43c~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">João Gomes</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'joao_gomes')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="joao_gomes"
+                    src="https://dl.dropboxusercontent.com/scl/fi/tko7vvi55sqkhb3ekt5hr/Jo-o_Gomes-Demo.mp3?rlkey=avfgktpvryok8q8nc0jgmslg4&st=px9fv53c&raw=1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Júlio Nascimento">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/julionascimento.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Júlio Nascimento</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'julio_nascimento')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="julio_nascimento"
+                    src="https://dl.dropboxusercontent.com/scl/fi/nhveg3iz2dnsjwqk0z40g/J-lio_Nascimento-Demo.mp3?rlkey=wax9c9o8sgvzawbw55mo4t0zq&st=ij6xc3xk&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Kabral Seresta">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_2cd1acfcc49d46b39a0c979fd2a5c39f~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_2cd1acfcc49d46b39a0c979fd2a5c39f~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Kabral Seresta</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'kabral_seresta')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="kabral_seresta"
+                    src="https://dl.dropboxusercontent.com/scl/fi/e6ctmnb86lipsvt95992t/Kabral_Seresta-Demo.mp3?rlkey=fprsuw6k1rb61ijo7knuodrxl&st=vak7w629&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Lambadão">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/lambada.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Lambadão</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'lambadao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="lambadao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/jh5ipajmtpv3x2dmefezp/Lambad-o-Demo.mp3?rlkey=j2xa1u4yn1n2e0dnp05c6kut9&st=w5ay54vk&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Luís - O Poderoso Chefão">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/luis_poderosochefao.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Luís - O Poderoso Chefão</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'luis_chefao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="luis_chefao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/0isg3bas6jsptduki1xw0/Lu-s_OpoderosoChef-o-Demo.mp3?rlkey=ssdmqzhmaoyjne8zao2lrfdkl&st=ca5dkd6c&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Manu Batidão">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/manubatidao.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Manu Batidão</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'manu_batidao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="manu_batidao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/ayfs8diu6qc0gi1aghj7i/Manu_Batid-o-Demo.mp3?rlkey=73vv3zgm5czlrddwpfgc5a4sp&st=d697kqxe&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Marcynho Sensação">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_6e7727df73cd46359939e11cd790f338~mv2.jpg/v1/fill/w_32,h_32,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_6e7727df73cd46359939e11cd790f338~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Marcynho Sensação</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'marcynho')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="marcynho"
+                    src="https://dl.dropboxusercontent.com/scl/fi/i3q32gaiyvznx1doocvfv/Marcynho_Sensa-o-Demo.mp3?rlkey=tkmq0t66dgl4kfpo00xa6ub87&st=2pp01qt8&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Nadson Ferinha">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_ab443d341d244ed8934890cfc7a67307~mv2.jpg/v1/fill/w_32,h_32,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_ab443d341d244ed8934890cfc7a67307~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Nadson Ferinha</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'nadson')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="nadson"
+                    src="https://dl.dropboxusercontent.com/scl/fi/4bqrjnzcn95bl9mq1rw3w/Nadson_Ferinha-Demo.mp3?rlkey=5454enfhi6s2go30gv07adzf1&st=g4edz7cq&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Nivaldo Marques">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_c01de100e89742bebe1cbd83e46783dc~mv2.jpg/v1/fill/w_32,h_32,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_c01de100e89742bebe1cbd83e46783dc~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Nivaldo Marques</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'nivaldo')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="nivaldo"
+                    src="https://dl.dropboxusercontent.com/scl/fi/xe5j5e6s5s1dkzdbe8ygn/Nivaldo_Marques-Demo.mp3?rlkey=1aqojreq0zu8nrqzrmkxozkbh&st=0yci12cw&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Os Feras do Baile">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/osFerasdobaile.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Os Feras do Baile</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'feras_baile')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="feras_baile"
+                    src="https://dl.dropboxusercontent.com/scl/fi/j3qkpmhgrcnnr2482wfuw/Os_Feras_do_Baile-Demo.mp3?rlkey=jgzst44qquwygx9hf241ss1sv&st=0o8v5ado&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Pépe Moreno">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/pepemoreno.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Pépe Moreno</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'pp_moreno')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="pp_moreno"
+                    src="https://dl.dropboxusercontent.com/scl/fi/h3ax713hnq8cv4gcxtdwc/Pepe_Moreno-Demo.mp3?rlkey=8srrjiju2imlae10i6lga9485&st=leth4jun&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Pisadinha do Vaqueiro">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/pisadinhadovaqueiro.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Pisadinha do Vaqueiro</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'pisa_d_vaqueiro')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="pisa_d_vaqueiro"
+                    src="https://dl.dropboxusercontent.com/scl/fi/4v3gacawdytz166w3vo0m/Pisadinha_do_Vaqueiro-Demo.mp3?rlkey=c2phivsmmmuxcaqhvwvz8t6hj&st=cp6yd64s&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Rafinha Big Love">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/rafinhabiglove.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Rafinha Big Love</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'raf_biglove')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="raf_biglove"
+                    src="https://dl.dropboxusercontent.com/scl/fi/l5rwfg5pz3m56ss9ghccb/Rafinha_BigLove-Demo.mp3?rlkey=j7oha8s2mu74prgnbltzcm6qb&st=6ybsx7tr&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Rasta Chinela">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/rastachinela.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Rasta Chinela</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'rasta_chinela')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="rasta_chinela"
+                    src="https://dl.dropboxusercontent.com/scl/fi/i446iksx1nnwr6jmrkbff/Rasta_Chinela-Demo.mp3?rlkey=qqyqtn0vws3snwzdmkwk7olws&st=qpmmx1vi&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Reggae do Maranhão">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_e5e63335322a48b899d1594dc5e5f606~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_e5e63335322a48b899d1594dc5e5f606~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Reggae do Maranhão</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'reggae_maranhao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="reggae_maranhao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/j9hauo91iiotsset0eo5k/Reggae_do_Maranh-o-Demo.mp3?rlkey=ox6rk4aqh7qnibi69tzi6ziah&st=eh5r9840&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Reggaeton Forró Boys">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_c6b82415bbeb4c3cbd65efaf53eee582~mv2.jpg/v1/fill/w_32,h_32,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_c6b82415bbeb4c3cbd65efaf53eee582~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Reggaeton Forró Boys</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'reggaeton_boys')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="reggaeton_boys"
+                    src="https://dl.dropboxusercontent.com/scl/fi/5qvpp375m49l4usi1waxq/Reggaeton_Boys-Demo.mp3?rlkey=8rfr6u445xg894h6p42p5m16d&st=ft6jeq6m&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Renanzin Pressão">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_ba8e1b3d0af74773a2cd180cb7513f90~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_ba8e1b3d0af74773a2cd180cb7513f90~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Renanzin Pressão</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'renanzin_pressao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="renanzin_pressao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/y3foccuomw3dv7j59i1is/Renanzin_Press-o-Demo.mp3?rlkey=1c1lcrif2055jaadomc1p60qq&st=j1jh9lk0&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Robério">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_f00556255b0b4d399e585cbc835fe4a5~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_f00556255b0b4d399e585cbc835fe4a5~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Robério</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'roberio')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="roberio"
+                    src="https://dl.dropboxusercontent.com/scl/fi/936x3vdo85jc75einukcv/Rob-rio-Demo.mp3?rlkey=1qw7ixtl8gylfnd6j9waytjiw&st=zyi6fyzy&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Silvanno Salles">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/silvannosalles.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Silvanno Salles</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'silvanno_salles')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="silvanno_salles"
+                    src="https://dl.dropboxusercontent.com/scl/fi/ilw9wpdxp11xmi2s8lezw/Silvanno_Salles-Demo.mp3?rlkey=4ui0ym1t5q54cjcnvcirvy0k0&st=sux5kjif&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Soro Silva">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_88823f8f0bf749e9a0209161687b2c71~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_88823f8f0bf749e9a0209161687b2c71~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Soro Silva</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'soro_silva')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="soro_silva"
+                    src="https://dl.dropboxusercontent.com/scl/fi/pm9ekaw297m3c2uvun9t5/Soro_Silva-Demo.mp3?rlkey=ldxwnorgpkybhyyxnk4mgzcax&st=avnf2qys&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Tarcísio do Acordeon">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_2a438132a5d946b7868a2f87ecaefd10~mv2.jpg/v1/fill/w_39,h_37,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_2a438132a5d946b7868a2f87ecaefd10~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Tarcísio do Acordeon</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'tarcisio')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="tarcisio"
+                    src="https://dl.dropboxusercontent.com/scl/fi/xwazry5p560ya2ht1u2gv/Tarc-sio-Demo.mp3?rlkey=45ckmbf2hnylqb84tt3ab26x7&st=ni9vi506&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Thiago Aquino">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_eb8fe6f0aba941f98e883e0f4f9a03ab~mv2.jpg/v1/fill/w_39,h_37,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_eb8fe6f0aba941f98e883e0f4f9a03ab~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Thiago Aquino</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'thiago_aquino')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="thiago_aquino"
+                    src="https://dl.dropboxusercontent.com/scl/fi/4tkdy6iorpz72eop35lp6/Thiago_Aquino-Demo.mp3?rlkey=12u59kuwccwnk5h5nueuo015j&st=3gkyxmbl&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Toque Dez">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_2bb736760997489ea1648b6b3c208f47~mv2.jpg/v1/fill/w_39,h_37,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_2bb736760997489ea1648b6b3c208f47~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Toque Dez</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'toque_dez')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="toque_dez"
+                    src="https://dl.dropboxusercontent.com/scl/fi/m6zrvcm3bscfl9ckdcul3/Toque_Dez-Demo.mp3?rlkey=6s4eat81dsj5ivxgvt8np5o0v&st=acq6uyuf&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Valsa Sertaneja">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_78ddd8b8329a406e89eb7eeb5b500a4e~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_78ddd8b8329a406e89eb7eeb5b500a4e~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Valsa Sertaneja</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'valsa_sertaneja')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="valsa_sertaneja"
+                    src="https://dl.dropboxusercontent.com/scl/fi/3ebd7e8dpco01jwf8l33w/Valsa_Sertaneja-Demo.mp3?rlkey=9m4gu1bck4p3cszdq7zwoshff&st=wpo0qeur&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Washington Brasileiro">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_d26b18cba78b48938423138c340995d7~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_d26b18cba78b48938423138c340995d7~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Washington Brasileiro</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'washington_br')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="washington_br"
+                    src="https://dl.dropboxusercontent.com/scl/fi/qqs8jehdpqa31bnz6f08s/Washington_Brasileiro-Demo.mp3?rlkey=6ex55qgyebedum3vi3g68olvm&st=w8dn9nkq&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="WB Antigo">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/wb-antigo.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">WB Antigo</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'wb_antigo')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="wb_antigo"
+                    src="https://dl.dropboxusercontent.com/scl/fi/3huurqg2qv8g4i5ao7o8c/WB_Antigo-Demo.mp3?rlkey=2k4kz79trcfkuwhrnbfpea15o&st=4nyai01y&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Xote Pé de Serra">
+                <!-- Imagem do produto -->
+                <img src="https://static.wixstatic.com/media/3a8c92_aa9826ab998f4ed9a6c1aa45aae15735~mv2.jpg/v1/fill/w_39,h_38,al_c,q_80,usm_1.20_1.00_0.01,enc_avif,quality_auto/3a8c92_aa9826ab998f4ed9a6c1aa45aae15735~mv2.jpg"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Xote Pé de Serra</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'xote_pd_serra')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="xote_pd_serra"
+                    src="https://dl.dropboxusercontent.com/scl/fi/rrffg56kr84ws4411hred/Xote_P-_de_Serra-Demo.mp3?rlkey=juop51cxk5qk0oem0rjisf7cr&st=jw5ptx8c&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Zezo Samba Canção">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/zezo.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Zezo Samba Canção</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'zz_samba_cancao')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="zz_samba_cancao"
+                    src="https://dl.dropboxusercontent.com/scl/fi/8nrp965ls78oo4q28kwkj/Zezo_SambaCan-o-Demo.mp3?rlkey=oa1vr0u47xvf2uuduq2hghfbx&st=1q6hyj6p&raw=1"></audio>
+            </div>
+            
+            <div class="produto" data-nome="Zezo Xote">
+                <!-- Imagem do produto -->
+                <img src="img/rit-sample-v1/zezo.webp"
+                    alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Zezo Xote</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'zezo_xote')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="zezo_xote"
+                    src="https://dl.dropboxusercontent.com/scl/fi/ytlwdmktcvvg1452qkhss/Zezo_Xote-Demo.mp3?rlkey=g0ozyfjfutnkohsqmy6r0kx2s&st=wlx5qm8d&raw=1"></audio>
+            </div>
+        </div>
+
+        <div class="timbres_img" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 10px; border-radius: 8px; border: 1px solid blue; box-shadow: 0px 0px 3px lightblue; background-image: linear-gradient(to right, black, blue, black);">
+            <p style="width: 100%; text-align: center; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: poppins; background-image: linear-gradient(to bottom, blue, black);">
+                Confira a lista de timbres do Pack
+            </p>
+
+            <picture>
+                <source media="(max-width: 480px)" srcset="img/rit-sample-v1/3_timbres-img.webp" type="image/webp">
+                <source media="(max-width: 750px)" srcset="img/rit-sample-v1/2_timbres-img.webp" type="image/webp">
+                <source media="(max-width: 1064px)" srcset="img/rit-sample-v1/1_timbres-img.webp" type="image/webp">
+                <img src="img/rit-sample-v1/0_timbres-img.webp" alt="timbre_img">
+            </picture>
+        </div>
+
+        <div style="display: flex; flex-direction: column; justify-content: center; width: 100%; height: max-content; margin: auto; background-image: linear-gradient(to bottom, blue, black);">
+            <p style="width: 100%; text-align: center; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: poppins; background-image: linear-gradient(to bottom, blue, black);">
+                Adquirir Pack Sample
+            </p>
+            <div style="display: flex; flex-direction: row; width: 100%; height: max-content; justify-content: center; gap: 5px; background-image: linear-gradient(to right, black, blue, black);">
+                <a class="rit-yamaha" id="btn-comprar-sample-s670"
+                    style="cursor: pointer; box-shadow: 1px 1px 5px black;"
+                    data-nome="Pack Sample 2026 V1"
+                    data-teclado="PSR-S670"
+                    data-preco="67,00"
+                    data-imagem="img/img_tumb_pack_sample_2026_v1.webp"
+                    onclick="abrirCheckoutComDados(this)">
+                    PSR-S670
+                </a>
+    
+                <a class="rit-yamaha" id="btn-comprar-sample-sx600"
+                    style="cursor: pointer; box-shadow: 1px 1px 5px black;"
+                    data-nome="Pack Sample 2026 V1"
+                    data-teclado="PSR-SX600"
+                    data-preco="67,00"
+                    data-imagem="img/img_tumb_pack_sample_2026_v1.webp"
+                    onclick="abrirCheckoutComDados(this)">
+                    PSR-SX600
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="roda-pe">
+            <div class="element-group">
+                <p style=" font-size: 15px; padding: 20px 0px 10px 0px;">Suporte:</p>
+                <a class="contato"
+                    href="https://api.whatsapp.com/send/?phone=5583999576320&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <img style="height: 24px; width: 24px;" src="img/icon-whatsapp.png" alt="whatsapp_icone">
+                    <p style="padding: 10px;">WhatsApp</p>
+                </a>
+                <p style="font-size: 12px; padding: 20px 0px 10px 0px;">Copyright &copy; 2026, Francisco Sousa</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="js/audio-play.js"></script>
+<script src="js/abrir-checkout.js"></script>
+
+<!-- Checkout -->
+<div id="overlay">
+    <div id="popup-checkout">
+        <button class="fechar" onclick="fecharCheckout()">&#x2716</button> <!--✖-->
+
+        <div class="product-info">
+            <img id="popup-imagem" style="width: 100px;" src="" alt="Produto" />
+            <h2 id="popup-nome"></h2>
+            <p id="popup-preco"></p>
+        </div>
+        <hr>
+
+        <form id="form-checkout">
+            <label for="nome">Como devemos te chamar?</label>
+            <input type="text" id="nome" placeholder="Seu nome e sobrenome" required />
+
+            <label for="whatsapp">WhatsApp (com DDD):</label>
+            <input type="tel" id="whatsapp" placeholder="Ex: 11987654321" required />
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Insira um e-mail válido" required />
+
+            <hr>
+            <div class="mensagem">
+                <p>
+                    Após a confirmação do pagamento, o <strong>PACK</strong> será enviado para o seu WhatsApp ou por e-mail!
+                </p>
+            </div>
+
+            <button type="submit" id="btn-finalizar" onclick="enviarEmailCheckout(onFinish)">FINALIZAR COMPRA</button>
+
+            <!-- Mensagem de retorno ao usuário -->
+            <div id="mensagem-status" style="margin-top: 15px; font-size: 14px"></div>
+        </form>
+    </div>
+</div>
+
+<script src="js/confirmacao.js"></script>
+<script src="js/enviar-email-checkout.js"></script>
+
+</html>

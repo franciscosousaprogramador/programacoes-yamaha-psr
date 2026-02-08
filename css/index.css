@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #71717A;
+    border-radius: 100px;
+}
+
+body {
+    background-color: #000;
+}
+
+main {
+    overflow-x: hidden;
+    background-color: #000;
+    background-size: cover;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 3px;
+}
+
+.cabecalho {   
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        margin: 10px auto;
+    }
+    .cabecalho {
+        margin: -7px auto -8px auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav {
+        flex-direction: column;
+        margin: 10px auto;
+    }
+    .cabecalho {
+        margin: auto;
+        flex-direction: column;
+    }
+}
+
+.rit-yamaha {
+    font-family: Poppins;
+    width: max-content;
+    height: max-content;
+    color: black;
+    background-color: white;
+    padding: 8px;
+    margin: 8px 0px 8px 0px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#popupMenu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /*height: calc(100% - 70px);
+  margin-top: 70px;*/
+}
+
+#popupMenu iframe {
+    display: block;
+    width: 360px;
+    height: 360px;
+    border: none;
+    animation: aparecer 0.3s ease-out;
+}
+
+.fecharMenu {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 327px;
+    font-size: 18px;
+    background: none;
+    color: #aaa;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: color 100ms;
+}
+
+.fecharMenu:hover {
+    color: #eef;
+    transition: color 100ms;
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.sessao-a {
+    background-color: rgb(0, 10, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.sessao-b {
+    background-color: rgb(0, 15, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.rit-psr {
+    font-family: Poppins;
+    display: flex;
+    width: 1500px;
+    align-items: start;
+    justify-content: start;
+    margin-left: 15px;
+}
+
+.roda-pe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    background-color: #17171C;
+    padding: 0px;
+}
+
+.element-group {
+    font-family: Poppins;
+    color: white;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    background-color: #22C55E;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 10px;
+    transition: color 200ms;
+    background: 200ms;
+
+    /*background-image: linear-gradient(to bottom, #afa,  #0a0);*/
+}
+
+.contato:hover {
+    color: rgb(5, 46, 22);
+    background-color: rgb(74, 222, 128);
+    transition: color 200ms;
+    background: 200ms;
+}

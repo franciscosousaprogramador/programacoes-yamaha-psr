@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Ritmos Yamaha PSR S-500 e Tyros 1 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/photos-piano-vector.ico" type="image/x-icon">
+    <title>PSR-S500 e Tyros1</title>
+
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <!-- Cabeçalho da Página -->
+    <header>
+        <div class="nav-bar">
+            <div class="logo" style="display: flex; justify-content: center; padding: 10px">
+                <div class="logo-img" style="display: flex; justify-content: center;">
+                    <img src="img/logo-francisco.png" alt="Logo1" />
+                </div>
+                <div class="logo-img" style="display: flex; justify-content: center;
+                padding: 3px; margin-top: 2px;">
+                    <img src="img/fs-keyborad.png" alt="Logo2" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo da Página -->
+    <main>
+        <!-- Banner do site -->
+        <div class="capa-container">
+            <img src="img/ritmos-organicos-banner.png" alt="Capa do site" />
+        </div>
+
+        <div class="search-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="Buscar" class="search-icon" />
+            <input type="text" id="searchInput" placeholder="Procurar Ritmo" />
+        </div>
+
+        <!-- Lista de ritmos -->
+        <div class="lista-produtos" id="grupo-de-ritmos">
+
+            <div class="produto" data-nome="Kara Veia">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/kara-veia-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Kara Veia</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'kara-veia')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Kara Veia" data-preco="19,90"
+                        data-imagem="img/ritmos/kara-veia-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="kara-veia"
+                    src="https://dl.dropboxusercontent.com/scl/fi/474ikkkapf5ngzfqhqikm/034_Kara_Veia.mp3?rlkey=wot50g344dwlpebh2om9ni1ix&st=otygcwiv"></audio>
+            </div>
+
+            <div class="produto" data-nome="Zé Armando Cantor">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/ze-armando-ct-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Zé Armando Cantor</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'ze-armando')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Zé Armando Cantor" data-preco="19,90"
+                        data-imagem="img/ritmos/ze-armando-ct-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="ze-armando"
+                    src="https://dl.dropboxusercontent.com/scl/fi/bfzbijaqo2bjm0l2cf97z/011_Ze_Armando_Cantor.mp3?rlkey=16h66rns00ti90lbntz7rk6qd&st=o2tuw9r1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Zé Vaqueiro">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/ze-vaq-marav.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Zé Vaqueiro</p>
+                    <p class="preco">R$ 14,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'ze-vaq-mavilh')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Zé Vaqueiro" data-preco="14,90"
+                        data-imagem="img/ritmos/ze-vaq-marav.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="ze-vaq-mavilh"
+                    src="https://dl.dropboxusercontent.com/scl/fi/vcocgu2ifixefoaqi1poo/010_Ze_Vaqueiro.mp3?rlkey=sife7vqzy8r3edd040dzgtdxr&st=mpw294yn"></audio>
+            </div>
+
+            <div class="produto" data-nome="Ramonzin Lapada">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/ramonzin-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Ramonzin Lapada</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'ramonzin')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Ramonzin Lapada" data-preco="19,90"
+                        data-imagem="img/ritmos/ramonzin-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="ramonzin"
+                    src="https://dl.dropboxusercontent.com/scl/fi/hrq4qssfq70j4qhbtfsw5/009_Ramonzin_Lapada.mp3?rlkey=4eroq8d1x92wwimv7tooaj18k&st=en7ohpn0"></audio>
+            </div>
+
+            <div class="produto" data-nome="Mumuzin do Piseiro">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/mumuzin-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Mumuzin do Piseiro</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'mumuzin')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Mumuzin do Piseiro" data-preco="19,90"
+                        data-imagem="img/ritmos/mumuzin-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="mumuzin"
+                    src="https://dl.dropboxusercontent.com/scl/fi/esa1kk8w6e96mzf6xcexi/008_Mumuzin_Do_Piseiro.mp3?rlkey=gejafsb570mw0wcbtwcihune5&st=fwy1peoq"></audio>
+            </div>
+
+            <div class="produto" data-nome="Arrocha Top">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/arrocha-top-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Arrocha Top</p>
+                    <p class="preco">R$ 24,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'arrocha-top')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Arrocha Top" data-preco="24,90"
+                        data-imagem="img/ritmos/arrocha-top-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="arrocha-top"
+                    src="https://dl.dropboxusercontent.com/scl/fi/c1ererm1jnoc6hknkdgeq/007_Arrocha_Top.mp3?rlkey=97ps4fv57hedxw631859v3ql6&st=sz5032z1"></audio>
+            </div>
+
+            <div class="produto" data-nome="Silvanno Salles">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/silvanno-salles-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Silvanno Salles</p>
+                    <p class="preco">R$ 14,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'silvanno-salles')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Silvanno Salles" data-preco="14,90"
+                        data-imagem="img/ritmos/silvanno-salles-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="silvanno-salles"
+                    src="https://dl.dropboxusercontent.com/scl/fi/7nqnixikbh1yquk9hlnbd/006_Silvanno_Salles.mp3?rlkey=g2sh9vttvlmifdstzwr07c1lz&st=suj01rwo"></audio>
+            </div>
+
+            <div class="produto" data-nome="Chicão do Piseiro">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/chicao-do-piseiro-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Chicão do Piseiro</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'chicao-do-piseiro')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Chicão do Piseiro" data-preco="19,90"
+                        data-imagem="img/ritmos/chicao-do-piseiro-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="chicao-do-piseiro"
+                    src="https://dl.dropboxusercontent.com/scl/fi/4ixmi05serw2lussv4sch/005_Chicao_do_Piseiro.mp3?rlkey=4ta9htqmc9wxf3a4yyvgc089p&st=obwxz6c0"></audio>
+            </div>
+
+            <div class="produto" data-nome="Léo Magalhaes">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/leo-magalhaes-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Léo Magalhaes</p>
+                    <p class="preco">R$ 14,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'leo-mag')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Léo Magalhaes" data-preco="14,90"
+                        data-imagem="img/ritmos/leo-magalhaes-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="leo-mag"
+                    src="https://dl.dropboxusercontent.com/scl/fi/fcbv3zevmr4s1h47c2mhd/004_Leo_Magalhaes.mp3?rlkey=i0zluypqhk256lo22wl266ni9&st=vybxtwza"></audio>
+            </div>
+
+            <div class="produto" data-nome="Cachorrinho do Brega">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/cachorrinho-do-brega-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Cachorrinho do Brega</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'cachorin-brega')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Cachorrinho do Brega" data-preco="19,90"
+                        data-imagem="img/ritmos/cachorrinho-do-brega-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="cachorin-brega"
+                    src="https://dl.dropboxusercontent.com/scl/fi/jpy2f5fqmjbe37esa08pf/003_Cachorrinho_Brega.mp3?rlkey=wsg1qgt28ey6zf4bv2kaf8kel&st=x204la6l"></audio>
+            </div>
+
+            <div class="produto" data-nome="Nito do Zoto">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/nito-do-zoto-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Nito do Zoto</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'nito-zoto')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Nito do Zoto" data-preco="19,90"
+                        data-imagem="img/ritmos/nito-do-zoto-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="nito-zoto"
+                    src="https://dl.dropboxusercontent.com/scl/fi/v81wl9rupbdq745jadggi/002_Nito_do_Zoto.mp3?rlkey=8bq0m1dzrx1c8ko4mxe11gbxh&st=4xk24vph"></audio>
+            </div>
+
+            <div class="produto" data-nome="Forró das Antigas">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/forro-das-antigas-img.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Forró das Antigas</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'forro-antigas')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Forró das Antigas" data-preco="19,90"
+                        data-imagem="img/ritmos/forro-das-antigas-img.webp" onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="forro-antigas"
+                    src="https://dl.dropboxusercontent.com/scl/fi/90wjnpjiu77hzcvxeip1t/001_Forro_das_Antigas.mp3?rlkey=ek9dg92a6medjh1nxo7u6ipha&st=uu2hjk0q"></audio>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+    </main>
+
+    <footer>
+        <div class="roda-pe">
+            <div class="element-group">
+                <p style=" font-size: 15px; padding: 20px 0px 10px 0px;">Suporte:</p>
+                <a class="contato"
+                    href="https://api.whatsapp.com/send/?phone=5583999576320&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <img style="height: 24px; width: 24px;" src="img/icon-whatsapp.png" alt="whatsapp_icone">
+                    <p style="padding: 10px;">WhatsApp para Contato</p>
+                </a>
+                <p style="font-size: 12px; padding: 20px 0px 10px 0px;">Copyright &copy; 2025, Francisco Sousa</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/procurar-ritmo.js"></script>
+</body>
+
+<script src="js/audio-play.js"></script>
+<script src="js/abrir-checkout.js"></script>
+
+<div id="overlay">
+    <div id="popup-checkout">
+        <button class="fechar" onclick="fecharCheckout()">&#x2716</button> <!--✖-->
+
+        <div class="product-info">
+            <img id="popup-imagem" src="" alt="Produto" />
+            <h2 id="popup-nome"></h2>
+            <p id="popup-preco"></p>
+        </div>
+        <hr>
+
+        <form id="form-checkout">
+            <label for="nome">Como devemos te chamar?</label>
+            <input type="text" id="nome" placeholder="Seu nome e sobrenome" required />
+
+            <label for="whatsapp">WhatsApp (com DDD):</label>
+            <input type="tel" id="whatsapp" placeholder="Ex: 11987654321" required />
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Insira um e-mail válido" required />
+
+            <hr>
+            <div class="mensagem">
+                Após a confirmação do pagamento, o ritmo será enviado para o seu
+                WhatsApp ou e-mail!
+            </div>
+
+            <button type="submit" id="btn-finalizar">FINALIZAR COMPRA</button>
+
+            <!-- Mensagem de retorno ao usuário -->
+            <div id="mensagem-status" style="margin-top: 15px; font-size: 14px"></div>
+        </form>
+    </div>
+</div>
+
+<script src="js/confirmacao.js"></script>
+
+</html>

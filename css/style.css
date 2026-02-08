@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    background-color: #18181bff;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.main-page {
+    min-width: 0px;
+    min-height: max(767px, 100%);
+    width: calc(100% - 20px);
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+    height: max-content;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    row-gap: 10px;
+    opacity: 1;
+}
+
+/* Banner do site */
+.capa-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.capa-container img {
+    width: 100%;
+    /* max-width: 50vw; */
+    /* 1/2 da largura da tela */
+    height: auto;
+    border-radius: 10px;
+    max-width: 824px;
+}
+
+/* Responsivo: no celular ocupa toda a largura */
+@media (max-width: 768px) {
+    .capa-container img {
+        max-width: 100%;
+    }
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    background: transparent;
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #71717A;
+    border-radius: 100px;
+}
+
+/* Caixa de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 80px;
+    padding: 5px 10px;
+    max-width: 720px;   /* Antes era 1500px (toda a largura da tela) */
+    margin: 20px auto 20px;
+    height: 20px;
+    width: 80%;         /* Antes era calc(100% - 20px) */
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
+.search-container input[type="text"] {
+    font-family: Poppins;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 18px;
+    flex-grow: 1;
+}
+
+/* Personalização do bloco de produto */
+.lista-produtos {
+    display: grid;
+    grid-auto-rows: minmax(max-content, 65px);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 5px;
+    padding: 3px;
+    overflow: auto;
+    grid-auto-flow: row;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1750px;
+    width: calc(100% - 20px);
+    justify-content: center;
+
+    opacity: 1;
+    align-self: center;
+    min-height: 0px;
+    height: max-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.lista-produtos-sample {
+    display: grid;
+    grid-auto-rows: minmax(max-content, 52px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 5px;
+    padding: 3px;
+    overflow: auto;
+    grid-auto-flow: row;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1750px;
+    width: calc(100% - 20px);
+    justify-content: center;
+
+    opacity: 1;
+    align-self: center;
+    min-height: 0px;
+    height: max-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.lista-produtos-sample .produto {
+    min-width: 280px;
+    height: 52px;
+}
+
+.lista-produtos-sample .produto-info .titulo {
+    text-shadow: 1px 1px 1px black;
+}
+
+.lista-produtos-sample .produto img {
+    background-color: #00f;
+    width: 48px;
+    height: 48px;
+    padding: 2px;
+}
+
+.lista-produtos-sample .produto .acoes .btn-play {
+    margin-right: 6px;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Poppins;
+    padding: 0px;
+    background-image: linear-gradient(to bottom, #008, #002);
+    /*: -webkit-linear-gradient(top, rgb(174, 0, 131), rgb(42, 0, 82));
+    /*border: 2px solid #3533cd;*/
+    border: 2px solid #002;
+    border-radius: 80px;
+    gap: 2px;
+    cursor: pointer;
+    min-width: 320px;
+}
+
+.produto img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 80px;
+    flex-shrink: 0;
+}
+
+.produto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 65px;
+}
+
+.produto-info .titulo {
+    font-size: 14px;
+    color: #fff;
+    margin: 0px 0px 0px 5px;
+    white-space: pre-wrap;
+    overflow: visible;
+    font-weight: 400;
+    border-radius: 0px;
+    opacity: 1;
+    align-self: flex-start;
+    min-width: 0px; 
+    min-height: 0px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: calc(100% - 2px);
+}
+
+.produto-info .preco {
+    font-size: 12px;
+    color: #4f4;
+    margin: 2px 0px 0px 3px;
+    padding: 3px 0px 1px 0px;
+    background-color: rgb(0, 0, 0);
+    white-space: pre-wrap;
+    overflow: visible;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.2;
+    border-radius: 50px;
+    opacity: 1;
+    align-self: flex-start;
+    min-width: 0px;
+    max-width: 60px;
+    min-height: 0px;
+    height: max-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: calc(100% + 0px);
+}
+
+/* Personalização dos botões de ação */
+.acoes {
+    display: flex;
+    flex-direction: row;
+}
+
+.acoes button {
+    padding: 5px 5px;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-play {
+    border: 2px solid white;
+    font-size: 1.2rem;
+    background-color: #001;
+    color: white;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.btn-play:hover {
+    border: 2px solid #4f4;
+    color: white;
+    /*stroke: #4caf50;*/
+    stroke: #4f4;
+    fill: none;
+}
+
+.btn-comprar {
+    /*border: 2px solid #3533cd;*/
+    border: 2px solid #4f4;
+    background-color: #001;
+    color: #4f4;
+    margin: auto 8px auto 3px;
+    font-size: 12px;
+    font-family: poppins;
+    width: 70px;
+    height: 40px;
+}
+
+.btn-comprar:hover {
+    /*border: 2px solid #4f4;*/
+    border: 2px solid white;
+    color: #fff;
+}
+
+.btn-comprar-null {
+    border: 2px solid #f00;
+    background-color: #001;
+    color: #f00;
+    margin: auto 8px auto 3px;
+    font-size: 12px;
+    font-family: poppins;
+    width: 70px;
+    height: 40px;
+}
+
+@media (max-width: 200px) {
+    .lista-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .produto img {
+        margin-bottom: 8px;
+    }
+
+    .acoes {
+        margin-top: 8px;
+        align-self: flex-start;
+    }
+}
+
+
+/* Adiciona uma animação à imagem do produto */
+/* Adiciona uma borda ao bloco de produto */
+.produto.ativo {
+    border: 2px solid #3498db;
+}
+
+/* Estilo animado da imagem quando o áudio estiver tocando */
+.img-ativa {
+    animation: pendulo 0.7s infinite ease-in-out alternate;
+    transform-origin: center;
+}
+
+/* Mantém o botão play com a borda hover quando o áudio estiver tocando */
+.produto.ativo .btn-play {
+    border-color: #4f4;
+}
+
+/* Animação de pêndulo (Adicionada à imagem do produto)*/
+@keyframes pendulo {
+    0% {
+        transform: rotate(-7deg);
+    }
+
+    100% {
+        transform: rotate(7deg);
+    }
+}
+
+/* Tela escura com desfoque (Quando clicar no botão COMPRAR) */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pop-up de checkout */
+#popup-checkout {
+    background: #000a0f;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+    width: 90%;
+    max-width: 320px;
+    z-index: 1001;
+    position: relative;
+    animation: aparecer 0.3s ease-out;
+}
+
+#popup-checkout .fechar {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #aaa;
+}
+
+/* Como as informações do produto aparecerão na página de checkout  */
+.product-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Imagem do produto */
+.product-info img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Título do produto */
+.product-info h2 {
+    margin: 0.2rem 0;
+    color: #fff;
+}
+
+/* Valor do produto */
+.product-info p {
+    margin: 0.2rem 0;
+    color: #28f745;
+}
+
+/* Nome de WhatsApp (como aparecem) */
+label {
+    margin: 0.2rem 0;
+    font-family: poppins;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Caixa de texto para inserir dados do usuário (nome e whatsapp) */
+input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: poppins;
+}
+
+/* Botão FINALIZAR COMPRA */
+button[type="submit"] {
+    padding: 0.8rem;
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #218838;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: poppins;
+}
+
+/* Botão finalizar compra (quando o cursor do mouse passar, muda de cor) */
+button[type="submit"]:hover {
+    background-color: #218838;
+    border: 1px solid #28f745;
+}
+
+/* Após a confirmação do pagamento, o produto será enviado para o seu WhatsApp! */
+.mensagem {
+    font-size: 12px;
+    text-align: center;
+    font-family: poppins;
+    color: #28f745;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Como a página de chekout vai aparecer (animação Fade-in) */
+@keyframes aparecer {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
