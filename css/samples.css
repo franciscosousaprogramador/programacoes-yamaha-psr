@@ -1,3 +1,16 @@
+.faca-sua-contribuicao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+}
+
+.faca-sua-contribuicao > div {
+    max-width: 1500px;
+}
+
 .email-contato {
     opacity: 1;
     color: rgb(0, 200, 255);
@@ -63,11 +76,11 @@ article a:hover {
     background-image: linear-gradient(to bottom, #008, #000);
 }
 
-.vid_tutor>svg {
+.vid_tutor > svg {
     width: 32px;
 }
 
-.vid_tutor>h1 {
+.vid_tutor > h1 {
     text-shadow: 1px 2px 5px #008;
 }
 

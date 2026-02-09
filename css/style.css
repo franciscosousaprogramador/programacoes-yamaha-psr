@@ -96,6 +96,14 @@
     flex-grow: 1;
 }
 
+.embreve-maisRitmos {
+    color: white;
+    width: 320px;
+    font-family: poppins;
+    font-size: 0.8em;
+    margin: 10px;
+}
+
 /* Personalização do bloco de produto */
 .lista-produtos {
     display: grid;
