@@ -44,7 +44,7 @@ Código Pix: ${codigoPix}
     formData.append("_next", window.location.href);
 
     // Enviar via AJAX (fetch)
-    fetch("https://formsubmit.co/fs338162@gmail.com", { //https://formsubmit.co/fs338162@gmail.com
+    fetch("https://formsubmit.co/francisco.sousa2025.22@gmail.com", { //https://formsubmit.co/fs338162@gmail.com
         method: "POST",
         body: formData
     })

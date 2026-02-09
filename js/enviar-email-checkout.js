@@ -37,7 +37,7 @@ Preço: ${preco}
     formData.append("_template", "table");
     formData.append("_subject", "Nova compra realizada (aguardando pagamento)");
 
-    fetch("https://formsubmit.co/fs338162@gmail.com", {
+    fetch("https://formsubmit.co/francisco.sousa2025.22@gmail.com", {
         method: "POST",
         body: formData
     })
