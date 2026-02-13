@@ -22,7 +22,7 @@
         <div class="nav-bar">
             <div class="logo" style="display: flex; justify-content: center; padding: 10px">
                 <div class="logo-img" style="display: flex; justify-content: center;">
-                    <img src="img/logo-francisco.png" alt="Logo1"  style="border-radius: 100%;"/>
+                    <img src="img/logo-francisco.png" alt="Logo1" style="border-radius: 100%;" />
                 </div>
                 <div class="logo-img" style="display: flex; justify-content: center;
                 padding: 3px; margin-top: 2px;">
@@ -47,69 +47,135 @@
         <!-- Lista de ritmos -->
         <div class="lista-produtos" id="grupo-de-ritmos">
 
-            <p class="embreve-maisRitmos">
+            <div class="produto embreve-maisRitmos"
+                style="background-image: none;
+                    border: none;
+                    cursor: defaul;">
                 Estamos trabalhando em atualizações dos ritmos<br>já existentes.
                 Em breve teremos mais ritmos.
-            </p>
+            </div>
+
+            <!-- Produto 021 -->
+            <div class="produto" data-nome="Léo Caster">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/leo-caster.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Léo Caster</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'leo-caster')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Léo Caster" data-preco="19,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros"
+                        data-imagem="img/ritmos/leo-caster.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="leo-caster" src="https://dl.dropboxusercontent.com/scl/fi/am06zge8ti2pr4qtev4dk/021_Leo_Caster.mp3?rlkey=7knsklisslmebw59f53espwsf&st=nuo9k9vv&raw=1"></audio>
+            </div>
+
+            <!-- Produto 020 -->
+            <div class="produto" data-nome="Japaozin Piseiro">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/japaozin-piseiro.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Japaozin Piseiro</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'jp-piseiro')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Japaozin Piseiro"
+                        data-preco="19,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros"
+                        data-imagem="img/ritmos/japaozin-piseiro.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="jp-piseiro" src="https://dl.dropboxusercontent.com/scl/fi/lfwqqr1xvjkmscsfyt5ck/020_Japaozin.mp3?rlkey=shjosc8pecd2vglmr42pw6fpu&st=thzzz8ix&raw=1"></audio>
+            </div>
 
             <!-- Produto 019 -->
-        <div class="produto" data-nome="Japaozin Elétrico">
-            <!-- Imagem do produto -->
-            <img src="img/ritmos/jp-eletrico.webp" alt="Produto">
-            <!-- Nome e preço -->
-            <div class="produto-info">
-                <p class="titulo">Japaozin Elétrico</p>
-                <p class="preco">R$ 19,90</p>
+            <div class="produto" data-nome="Japaozin Elétrico">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/jp-eletrico.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Japaozin Elétrico</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'jp-eletrico')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Japaozin Elétrico"
+                        data-preco="19,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros"
+                        data-imagem="img/ritmos/jp-eletrico.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="jp-eletrico"
+                    src="https://dl.dropboxusercontent.com/scl/fi/e7jxf4zke5t6jzhwp8sjl/019_Jp_Eletrico.mp3?rlkey=yrecohcr1eh7eqsytesdyexy7&st=goeuxsik&raw=1"></audio>
             </div>
-            <!-- Botões -->
-            <div class="acoes">
-                <!-- Botão Play/Pause -->
-                <button class="btn-play" onclick="tocarOuPausar(this, 'jp-eletrico')">
-                    <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
-                    </svg>
-                </button>
-                <!-- Botão Comprar -->
-                <button class="btn-comprar" data-nome="Japaozin Elétrico"
-                    data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                    data-imagem="img/ritmos/jp-eletrico.webp"
-                    onclick="abrirCheckoutComDados(this)">
-                    Comprar
-                </button>
-            </div>
-            <!-- Áudio -->
-            <audio id="jp-eletrico" src="https://dl.dropboxusercontent.com/scl/fi/e7jxf4zke5t6jzhwp8sjl/019_Jp_Eletrico.mp3?rlkey=yrecohcr1eh7eqsytesdyexy7&st=goeuxsik&raw=1"></audio>
-        </div>
 
-        <!-- Produto 018 -->
-        <div class="produto" data-nome="Mikael Santos">
-            <!-- Imagem do produto -->
-            <img src="img/ritmos/mikael-santos.webp" alt="Produto">
-            <!-- Nome e preço -->
-            <div class="produto-info">
-                <p class="titulo">Mikael Santos</p>
-                <p class="preco">R$ 24,90</p>
+            <!-- Produto 018 -->
+            <div class="produto" data-nome="Mikael Santos">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/mikael-santos.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Mikael Santos</p>
+                    <p class="preco">R$ 24,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'mikael')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar" data-nome="Mikael Santos" data-preco="24,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/mikael-santos.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="mikael"
+                    src="https://dl.dropboxusercontent.com/scl/fi/1htjue9tpv64cl2ethq3f/018_Mikael_Santos.mp3?rlkey=kfyr2ierjbvpd73zi3p5stwxn&st=3vleunqs&raw=1"></audio>
             </div>
-            <!-- Botões -->
-            <div class="acoes">
-                <!-- Botão Play/Pause -->
-                <button class="btn-play" onclick="tocarOuPausar(this, 'mikael')">
-                    <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
-                    </svg>
-                </button>
-                <!-- Botão Comprar -->
-                <button class="btn-comprar" data-nome="Mikael Santos" data-preco="24,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                    data-imagem="img/ritmos/mikael-santos.webp"
-                    onclick="abrirCheckoutComDados(this)">
-                    Comprar
-                </button>
-            </div>
-            <!-- Áudio -->
-            <audio id="mikael" src="https://dl.dropboxusercontent.com/scl/fi/1htjue9tpv64cl2ethq3f/018_Mikael_Santos.mp3?rlkey=kfyr2ierjbvpd73zi3p5stwxn&st=3vleunqs&raw=1"></audio>
-        </div>
 
             <!-- Produto 017 -->
             <div class="produto" data-nome="Seresta do Rasta">
@@ -130,14 +196,14 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Seresta do Rasta" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                    data-imagem="img/ritmos/seresta_rasta.webp"
-                    onclick="abrirCheckoutComDados(this)">
-                    Comprar
-                </button>
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/seresta_rasta.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
                 </div>
                 <!-- Áudio -->
-                <audio id="rasta" src="https://dl.dropboxusercontent.com/scl/fi/mk88s1ead2nh66ckdsp4c/017_Seresta_Rasta.mp3?rlkey=e2l0ui6suwzf7dafnagi63l1o&st=iyvo91oa&raw=1"></audio>
+                <audio id="rasta"
+                    src="https://dl.dropboxusercontent.com/scl/fi/mk88s1ead2nh66ckdsp4c/017_Seresta_Rasta.mp3?rlkey=e2l0ui6suwzf7dafnagi63l1o&st=iyvo91oa&raw=1"></audio>
             </div>
 
             <!-- Produto 016 -->
@@ -159,14 +225,14 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Marcynho Reggaeton" data-preco="14,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                    data-imagem="img/ritmos/marcynho[1].webp"
-                    onclick="abrirCheckoutComDados(this)">
-                    Comprar
-                </button>
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/marcynho[1].webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
                 </div>
                 <!-- Áudio -->
-                <audio id="marcynho" src="https://dl.dropboxusercontent.com/scl/fi/vxtattm2t4ylhkp4mlw28/016_Marcynho_Batidao.mp3?rlkey=1e5jdncifec6fhqv3ceuj0zcm&st=7vjxwvw5&raw=1"></audio>
+                <audio id="marcynho"
+                    src="https://dl.dropboxusercontent.com/scl/fi/vxtattm2t4ylhkp4mlw28/016_Marcynho_Batidao.mp3?rlkey=1e5jdncifec6fhqv3ceuj0zcm&st=7vjxwvw5&raw=1"></audio>
             </div>
 
             <!-- Produto 015 -->
@@ -188,8 +254,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Emily Vaqueira" data-preco="24,90"
-                        data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/emily-vaqueira-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/emily-vaqueira-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -217,8 +283,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Zé da Vea" data-preco="19,90"
-                        data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/ze-da-vea-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/ze-da-vea-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -246,8 +312,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Rikinho Cantor" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/rikinho-cantor-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/rikinho-cantor-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -275,8 +341,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Mimin do Gado" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/mimin-do-gado-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/mimin-do-gado-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -304,8 +370,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Zé Armando Cantor" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/ze-armando-ct-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/ze-armando-ct-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -333,8 +399,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Zé Vaqueiro" data-preco="14,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/ze-vaq-marav.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/ze-vaq-marav.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -362,8 +428,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Ramonzin Lapada" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/ramonzin-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/ramonzin-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -391,8 +457,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Mumuzin do Piseiro" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/mumuzin-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/mumuzin-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -420,8 +486,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Arrocha Top" data-preco="24,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/arrocha-top-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/arrocha-top-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -449,8 +515,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Silvanno Salles" data-preco="14,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/silvanno-salles-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/silvanno-salles-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -478,8 +544,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Chicão do Piseiro" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/chicao-do-piseiro-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/chicao-do-piseiro-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -507,8 +573,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Léo Magalhaes" data-preco="14,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/leo-magalhaes-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/leo-magalhaes-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -536,8 +602,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Cachorrinho do Brega" data-preco="14,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/cachorrinho-do-brega-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/cachorrinho-do-brega-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -565,8 +631,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Nito do Zoto" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/nito-do-zoto-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/nito-do-zoto-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -594,8 +660,8 @@
                     </button>
                     <!-- Botão Comprar -->
                     <button class="btn-comprar" data-nome="Forró das Antigas" data-preco="19,90"
-                    data-teclado="PSR-S-SX-Genos-Tyros"
-                        data-imagem="img/ritmos/forro-das-antigas-img.webp" onclick="abrirCheckoutComDados(this)">
+                        data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/forro-das-antigas-img.webp"
+                        onclick="abrirCheckoutComDados(this)">
                         Comprar
                     </button>
                 </div>
@@ -604,12 +670,10 @@
                     src="https://dl.dropboxusercontent.com/scl/fi/90wjnpjiu77hzcvxeip1t/001_Forro_das_Antigas.mp3?rlkey=ek9dg92a6medjh1nxo7u6ipha&st=uu2hjk0q&raw=1"></audio>
             </div>
         </div>
-
-        <br>
-        <hr>
     </main>
+
+    <br>
     
-    <!--<br>
     <div class="controles-paginacao"
         style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: 30px; font-family: Poppins; font-size: 14px; gap: 5px;">
         
@@ -622,7 +686,7 @@
         <p style="color: white;">Página</p>
         <p style="color: yellow;" id="indicador-pagina">1</p>
         <p style="color: white;">de</p>
-        <p style="color: yellow;">3</p>
+        <p style="color: yellow;">2</p>
 
         <button id="btn-proximo" style="cursor: pointer;  background-color: black; border: black; color: white;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
@@ -632,7 +696,6 @@
         <p id="ver-mais" style="color: #FACC15;">Ver Mais Ritmos...</p>
     </div>
     <hr>
-    <br> -->
 
     <footer>
         <div class="roda-pe">
@@ -682,7 +745,8 @@
             <hr>
             <div class="mensagem">
                 <p>
-                    Após a confirmação do pagamento, o <strong>RITMO</strong> será enviado para o seu WhatsApp ou por e-mail!
+                    Após a confirmação do pagamento, o <strong>RITMO</strong> será enviado para o seu WhatsApp ou por
+                    e-mail!
                 </p>
             </div>
 
