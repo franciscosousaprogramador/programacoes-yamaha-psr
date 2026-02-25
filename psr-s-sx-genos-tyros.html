@@ -47,13 +47,13 @@
         <!-- Lista de ritmos -->
         <div class="lista-produtos" id="grupo-de-ritmos">
 
-            <div class="produto embreve-maisRitmos"
+        <!--<div class="produto embreve-maisRitmos"
                 style="background-image: none;
                     border: none;
                     cursor: defaul;">
                 Estamos trabalhando em atualizações dos ritmos<br>já existentes.
                 Em breve teremos mais ritmos.
-            </div>
+            </div> -->
 
             <!-- Produto 048 -->
             <div class="produto" data-nome="Lucas Passos">
@@ -115,6 +115,36 @@
                 </div>
                 <!-- Áudio -->
                 <audio id="jp-piseiro" src="https://dl.dropboxusercontent.com/scl/fi/lfwqqr1xvjkmscsfyt5ck/047_Japaozin.mp3?rlkey=shjosc8pecd2vglmr42pw6fpu&st=thzzz8ix&raw=1"></audio>
+            </div>
+
+            <!-- Produto 022 -->
+            <div class="produto" data-nome="Edvan Batista">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/edvan-batista.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Edvan Batista</p>
+                    <p class="preco">R$ 24,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'edvan-batista')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Edvan Batista" data-preco="24,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros"
+                        data-imagem="img/ritmos/edvan-batista.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="edvan-batista" src="https://dl.dropboxusercontent.com/scl/fi/pxcxagpldre5nnt3fltbl/022_Edvan_Batista.mp3?rlkey=q8ojzw2ae0o2h3pjnv0adpyx3&st=4usymoos&raw=1"></audio>
             </div>
 
             <!-- Produto 020 -->
@@ -705,7 +735,7 @@
 
     <br>
     
-    <div class="controles-paginacao"
+<!--<div class="controles-paginacao"
         style="display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: 30px; font-family: Poppins; font-size: 14px; gap: 5px;">
         
         <button id="btn-voltar" style="display: none; cursor: pointer; background-color: black; border: black; color: white;">
@@ -725,7 +755,7 @@
               </svg>
         </button>
         <p id="ver-mais" style="color: #FACC15;">Ver Mais Ritmos...</p>
-    </div>
+    </div> -->
     <hr>
 
     <footer>
