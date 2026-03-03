@@ -21,7 +21,7 @@
         <div class="nav-bar">
             <div class="logo" style="display: flex; justify-content: center; padding: 10px">
                 <div class="logo-fs" style="display: flex; justify-content: center;">
-                    <img src="img/logo-francisco.png" alt="Logo1" style="border-radius: 100%;"/>
+                    <img src="img/logo-francisco.png" alt="Logo1" style="border-radius: 100%;" />
                 </div>
                 <div class="logo-img" style="display: flex; justify-content: center;
                 padding: 3px; margin-top: 2px;">
@@ -44,7 +44,7 @@
             <div class="cabecalho">
                 <!--<a class="rit-yamaha" target="next" href="#" id="btn1Menu">PSR S-SX-GENOS-TYROS</a>-->
                 <!--<a class="rit-yamaha" href="https://www.mediafire.com/folder/f09vo3nw78d89/Vinhetas" target="_blank" rel="external">Vinhetas</a>-->
-                <a class="rit-yamaha" href="samples.html" target="_self" rel="next">Samples</a>
+                <!--<a class="rit-yamaha" href="samples.html" target="_self" rel="next">Samples</a>-->
             </div>
         </div>
         <hr>
@@ -232,33 +232,62 @@
             <div class="sessao-b">
                 <div class="lista-produtos" id="grupo-de-ritmos" style="max-width: 1500px;">
 
-                    <!-- Produto 1 -->
-                    <div class="produto" data-nome="Seresta do Rasta">
+                    <!-- Produto 048 -->
+                    <div class="produto" data-nome="Barões E Igui.&Lulinha">
                         <!-- Imagem do produto -->
-                        <img src="img/ritmos/seresta_rasta.webp" alt="Produto">
+                        <img src="img/ritmos/baroes-igui&luli.webp" alt="Produto">
                         <!-- Nome e preço -->
                         <div class="produto-info">
-                            <p class="titulo">Seresta do Rasta</p>
-                            <p class="preco">R$ 19,90</p>
+                            <p class="titulo">Barões E Igui.&amp;Lulinha</p>
+                            <p class="preco">R$ 24,90</p>
                         </div>
                         <!-- Botões -->
                         <div class="acoes">
                             <!-- Botão Play/Pause -->
-                            <button class="btn-play" onclick="tocarOuPausar(this, 'rasta')">
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'baroes-iguieluli')">
                                 <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
                                 </svg>
                             </button>
                             <!-- Botão Comprar -->
-                            <button class="btn-comprar" data-nome="Seresta do Rasta" data-preco="19,90"
-                            data-teclado="PSR-S-SX-Genos-Tyros"
-                            data-imagem="img/ritmos/seresta_rasta.webp"
-                            onclick="abrirCheckoutComDados(this)">
-                            Comprar
-                        </button>
+                            <button class="btn-comprar" data-nome="Barões E Igui.&amp;Lulinha" data-preco="24,90"
+                                data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/baroes-igui&luli.webp"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
                         </div>
                         <!-- Áudio -->
-                        <audio id="rasta" src="https://dl.dropboxusercontent.com/scl/fi/mk88s1ead2nh66ckdsp4c/017_Seresta_Rasta.mp3?rlkey=e2l0ui6suwzf7dafnagi63l1o&st=iyvo91oa&raw=1"></audio>
+                        <audio id="baroes-iguieluli"
+                            src="https://dl.dropboxusercontent.com/scl/fi/l5lmr4qh42j1cj0jf2gug/049_Baroes-e-Iguinho-Lulinha.mp3?rlkey=819yzhobk7b38ebndrkbb4s7n&st=si96aorr&raw=1"></audio>
+                    </div>
+
+                    <!-- Produto 047 -->
+                    <div class="produto" data-nome="Japaozin Piseiro">
+                        <!-- Imagem do produto -->
+                        <img src="img/ritmos/japaozin-piseiro.webp" alt="Produto">
+                        <!-- Nome e preço -->
+                        <div class="produto-info">
+                            <p class="titulo">Japaozin Piseiro</p>
+                            <p class="preco">R$ 19,90</p>
+                        </div>
+                        <!-- Botões -->
+                        <div class="acoes">
+                            <!-- Botão Play/Pause -->
+                            <button class="btn-play" onclick="tocarOuPausar(this, 'jp-piseiro')">
+                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                                </svg>
+                            </button>
+                            <!-- Botão Comprar -->
+                            <button class="btn-comprar" data-nome="Japaozin Piseiro" data-preco="19,90"
+                                data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/japaozin-piseiro.webp"
+                                onclick="abrirCheckoutComDados(this)">
+                                Comprar
+                            </button>
+                        </div>
+                        <!-- Áudio -->
+                        <audio id="jp-piseiro"
+                            src="https://dl.dropboxusercontent.com/scl/fi/lfwqqr1xvjkmscsfyt5ck/047_Japaozin.mp3?rlkey=shjosc8pecd2vglmr42pw6fpu&st=thzzz8ix&raw=1"></audio>
                     </div>
 
                     <!-- Produto 2 -->
@@ -319,36 +348,7 @@
                             src="https://dl.dropboxusercontent.com/scl/fi/c1ererm1jnoc6hknkdgeq/007_Arrocha_Top.mp3?rlkey=97ps4fv57hedxw631859v3ql6&st=sz5032z1&raw=1"></audio>
                     </div>
 
-                    <!-- Produto 4 -->
-                    <div class="produto" data-nome="Léo Magalhaes">
-                        <!-- Imagem do produto -->
-                        <img src="img/ritmos/leo-magalhaes-img.webp" alt="Produto">
-                        <!-- Nome e preço -->
-                        <div class="produto-info">
-                            <p class="titulo">Léo Magalhaes</p>
-                            <p class="preco">R$ 14,90</p>
-                        </div>
-                        <!-- Botões -->
-                        <div class="acoes">
-                            <!-- Botão Play/Pause -->
-                            <button class="btn-play" onclick="tocarOuPausar(this, 'leo-mag')">
-                                <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
-                                </svg>
-                            </button>
-                            <!-- Botão Comprar -->
-                            <button class="btn-comprar" data-nome="Léo Magalhaes" data-preco="14,90"
-                                data-teclado="PSR-S-SX-Genos-Tyros" data-imagem="img/ritmos/leo-magalhaes-img.webp"
-                                onclick="abrirCheckoutComDados(this)">
-                                Comprar
-                            </button>
-                        </div>
-                        <!-- Áudio -->
-                        <audio id="leo-mag"
-                            src="https://dl.dropboxusercontent.com/scl/fi/fcbv3zevmr4s1h47c2mhd/004_Leo_Magalhaes.mp3?rlkey=i0zluypqhk256lo22wl266ni9&st=vybxtwza&raw=1"></audio>
-                    </div>
-
-                    <!-- Produto 5 -->
+                    <!-- Produto 1 -->
                     <div class="produto" data-nome="Forró das Antigas">
                         <!-- Imagem do produto -->
                         <img src="img/ritmos/forro-das-antigas-img.webp" alt="Produto">
@@ -385,6 +385,7 @@
                 </div>
             </div>
         </section>
+        <hr>
 
         <aside class="informacoes"
             style="display: flex; height: max-content; width: 100%; color: white; font-family: Poppins; font-size: 12px; justify-content: center; align-items: center;">
