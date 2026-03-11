@@ -55,7 +55,38 @@
                 Em breve teremos mais ritmos.
             </div> -->
 
-            <!-- Produto 048 -->
+            <!-- Produto 050 -->
+            <div class="produto" data-nome="Filho do Piseiro">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/filho-do-piseiro.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Filho do Piseiro</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'filho-do-piseiro')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Filho do Piseiro"
+                        data-preco="19,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros"
+                        data-imagem="img/ritmos/filho-do-piseiro.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="filho-do-piseiro" src="https://dl.dropboxusercontent.com/scl/fi/4bwnpwmt2mlm0292ojgn2/050_Fiho_do_Piseiro.mp3?rlkey=9gkk8ghs4yvbwqnfttvxlh1bc&st=tdsgycoo&raw=1"></audio>
+            </div>
+
+            <!-- Produto 049 -->
             <div class="produto" data-nome="Barões E Igui.&Lulinha">
                 <!-- Imagem do produto -->
                 <img src="img/ritmos/baroes-igui&luli.webp" alt="Produto">
