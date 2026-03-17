@@ -55,6 +55,37 @@
                 Em breve teremos mais ritmos.
             </div> -->
 
+            <!-- Produto 051 -->
+            <div class="produto" data-nome="Leãozinho do Forró">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/leaozinho.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Leãozinho do Forró</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'leaozinho')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Leãozinho do Forró"
+                        data-preco="19,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros"
+                        data-imagem="img/ritmos/leaozinho.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="leaozinho" src="https://dl.dropboxusercontent.com/scl/fi/a2j1xyqiw0kn58ndp12n1/051_Leaozinho_Do_Forro.mp3?rlkey=4ui6zd0r0pvhvti3n7ihr3pt0&st=2r2uyqpz&raw=1"></audio>
+            </div>
+
             <!-- Produto 050 -->
             <div class="produto" data-nome="Filho do Piseiro">
                 <!-- Imagem do produto -->
