@@ -90,6 +90,12 @@
         // Normalizar nome do produto para evitar erros com acentos
         const produtoNormalizado = produto?.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
 
+        const produtosPix9_90 = [
+            //Ritmos PSR E-EW
+            "arrasta pe",
+            "arrocha basico",
+        ]
+
         const produtosPix14_90 = [
             //Ritmos PSR S-SX
             "cachorrinho do brega",
@@ -101,9 +107,15 @@
             "yrlan costa",
             "pepe moreno",
 
-            //Ritmos PSX E-EW
-            "arrasta pe",
-            "arrocha basico",
+            //Ritmos PSR E-EW
+            "baiao",
+            "forro paredao",
+            "forro maranhao",
+            "forro romantico",
+
+            //Ritmo PSR SX600 Adaptados Para Linha E-EW
+            "arrocha sofrencia",
+            "forro vaquejada",
         ];
         const produtosPix19_90 = [
             //Ritmos PSR S-SX
@@ -129,11 +141,7 @@
             "filho do piseiro",
             "leaozinho do forro",
 
-            //Ritmos PSX E-EW
-            "baiao",
-            "forro paredao",
-            "forro maranhao",
-            "forro romantico",
+            //Ritmos PSR E-EW
             "piseiro paredao",
         ];
         const produtosPix24_90 = [
@@ -151,7 +159,9 @@
 
         const produtosPix67_00 = [
             "pack sample 2026 v1"
-        ];        
+        ];  
+        
+        const codigoPix9_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a52040000530398654049.905802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510NjrZO4a9oe630467D4"
 
         const codigoPix14_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a520400005303986540514.905802BR5925Francisco de Sousa Tavare6009SAO PAULO621405102v0ekgx7tU6304892F";
 
@@ -162,6 +172,9 @@
         const codigoPix67_00 = "00020126810014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a0219PACK Sample 2026 V1520400005303986540567.005802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510Ig74DH4yE963041CC1";
         
         let codigoPix = "Código não encontrado";
+        if (produtosPix9_90.includes(produtoNormalizado)) {
+            codigoPix = codigoPix9_90;
+        } else
         if (produtosPix14_90.includes(produtoNormalizado)) {
             codigoPix = codigoPix14_90;
         } else
