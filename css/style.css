@@ -186,8 +186,10 @@
 }
 
 .produto img {
-    width: 65px;
-    height: 65px;
+    width: 61px;
+    height: 61px;
+    padding: 2px;
+    background-color: blue;
     object-fit: cover;
     border-radius: 80px;
     flex-shrink: 0;
