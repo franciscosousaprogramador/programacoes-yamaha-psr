@@ -55,7 +55,7 @@
                 <!-- Nome e preço -->
                 <div class="produto-info">
                     <p class="titulo">Arrasta Pé</p>
-                    <p class="preco">R$ 9,90</p>
+                    <p class="preco">R$ 14,90</p>
                 </div>
                 <!-- Botões -->
                 <div class="acoes">
@@ -68,7 +68,7 @@
                     <!-- Botão Comprar -->
                     <button class="btn-comprar"
                         data-nome="Arrasta Pé"
-                        data-preco="9,90"
+                        data-preco="14,90"
                         data-teclado="PSR-E-EW"
                         data-imagem="img/ritmos_psr_e/sanfona.webp"
                         onclick="abrirCheckoutComDados(this)">
@@ -111,6 +111,38 @@
                 <!-- Áudio -->
                 <audio id="arrocha_basico"
                     src="https://dl.dropboxusercontent.com/scl/fi/j1ov1jqtky5c3est1z0b4/02_Arrocha_Basico.mp3?rlkey=h3vbbpmmuw5z3eecyo9moqmzw&st=4max3s3w&raw=1"></audio>    
+            </div>
+
+            <!-- Produto 8 -->
+            <div class="produto" data-nome="Arrochadeira">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/0a_user_no_photo.png"
+                    alt="Produto" />
+                <div class="produto-info">
+                    <!-- Nome e preço -->
+                    <p class="titulo">Arrochadeira</p>
+                    <p class="preco">R$ 9,90</p>
+                </div>
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'arrochadeira')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Arrochadeira"
+                        data-preco="9,90"
+                        data-teclado="PSR-E-EW"
+                        data-imagem="img/ritmos/0a_user_no_photo.png"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="arrochadeira"
+                    src="https://dl.dropboxusercontent.com/scl/fi/dvh8g3cuioqt7le1nyq7a/08_Arrochadeira.mp3?rlkey=mntl5v56als7sjuiduer2no9s&st=7avrtdii&raw=1"></audio>
             </div>
 
             <!-- Produto 3 -->
@@ -272,8 +304,6 @@
                 <audio id="piseiro_paredao"
                     src="https://dl.dropboxusercontent.com/scl/fi/aeq6x7ocikclu23pnr7sh/07_Piseiro_Paredao.mp3?rlkey=3m5ysb7mtww4if9l52tq8mbnv&st=mief2hae&raw=1"></audio>
             </div>
-            
-            <p class="embreve-maisRitmos">Em breve teremos mais ritmos.</p>
         </div>
         <hr>
 
