@@ -241,6 +241,38 @@
                     src="https://dl.dropboxusercontent.com/scl/fi/f3nbydcteu63fz6h4wsxr/04_Forro_Paredao.mp3?rlkey=s3np033cf498gow7hw9lyygec&st=6qx0ym80&raw=1"></audio>
             </div>
 
+            <!-- Produto 9 -->
+            <div class="produto" data-nome="Forró Paredão 2">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos_psr_e/paredao.webp"
+                    alt="Produto" />
+                <div class="produto-info">
+                    <!-- Nome e preço -->
+                    <p class="titulo">Forró Paredão 2</p>
+                    <p class="preco">R$ 19,90</p>
+                </div>
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'forro_paredao2')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Forró Paredão 2"
+                        data-preco="19,90"
+                        data-teclado="PSR-E-EW"
+                        data-imagem="img/ritmos_psr_e/paredao.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="forro_paredao2"
+                    src="https://dl.dropboxusercontent.com/scl/fi/fxzx2c3pf6sswag04gk6n/10_Forro_Paredao_V2.mp3?rlkey=afjvrfbjzpdxhqq93bir5806l&st=jhq5qoal&raw=1"></audio>
+            </div>
+
             <!-- Produto 5 -->
             <div class="produto" data-nome="Forró Maranhão">
                 <!-- Imagem do produto -->
@@ -340,7 +372,15 @@
         <hr>
 
         <br>
-        <p style="color: white; font-family: poppins; margin-left: 20px;">Ritmos Adaptados do SX600</p>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="display: flex; width: 1750px; align-items: start; justify-content: start;">
+                <p style="color: white; font-family: poppins; margin-left: 20px;">
+                    Ritmos Adaptados do SX600
+                </p>
+            </div>
+
+        </div>
         <div class="lista-produtos" id="grupo-de-ritmos">
 
             <!-- Produto 1 -->
