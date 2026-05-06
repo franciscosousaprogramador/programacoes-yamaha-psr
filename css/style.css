@@ -104,6 +104,31 @@
     margin: 10px;
 }
 
+.promocao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 5px auto 5px auto;
+    color: white;
+    font-family: poppins;
+}
+
+.promocao img {
+    border-radius: 20px;
+}
+
+.promocao p, button {
+    margin: 5px 10px;
+}
+
+@media (max-width: 480px) {
+    .promocao {
+        flex-direction: column;
+    }
+}
+
 /* Personalização do bloco de produto */
 .lista-produtos {
     display: grid;

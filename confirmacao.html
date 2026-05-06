@@ -167,6 +167,10 @@
             "baroes e igui.&lulinha",
         ];
 
+        const produtosPix47_00 = [
+            "pack 10 ritmos pro-level-e"
+        ];
+
         const produtosPix67_00 = [
             "pack sample 2026 v1"
         ];  
@@ -178,6 +182,8 @@
         const codigoPix19_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a520400005303986540519.905802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510ixKyQbpXaB63041481";
 
         const codigoPix24_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a520400005303986540524.905802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510Z6MFq9N5M16304E6F9";
+
+        const codigoPix47_00 = "";
 
         const codigoPix67_00 = "00020126810014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a0219PACK Sample 2026 V1520400005303986540567.005802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510Ig74DH4yE963041CC1";
         
@@ -194,6 +200,9 @@
         if (produtosPix24_90.includes(produtoNormalizado)) {
             codigoPix = codigoPix24_90;
         } else
+        if (produtosPix47_00.includes(produtoNormalizado)) {
+            codigoPix = codigoPix47_00;
+        }else
         if (produtosPix67_00.includes(produtoNormalizado)) {
             codigoPix = codigoPix67_00;
         }
