@@ -116,6 +116,8 @@
 }
 
 .promocao img {
+    width: 256px;
+    height: 256px;
     border-radius: 20px;
 }
 
@@ -126,6 +128,12 @@
 @media (max-width: 480px) {
     .promocao {
         flex-direction: column;
+    }
+    .promocao img {
+        align-self: flex-start;
+        margin-left: 10px;
+        width: 196px;
+        height: 196px;
     }
 }
 
