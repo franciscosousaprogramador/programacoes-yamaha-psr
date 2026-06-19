@@ -210,6 +210,37 @@
                 <audio id="jp-piseiro" src="https://dl.dropboxusercontent.com/scl/fi/lfwqqr1xvjkmscsfyt5ck/047_Japaozin.mp3?rlkey=shjosc8pecd2vglmr42pw6fpu&st=thzzz8ix&raw=1"></audio>
             </div>
 
+            <!-- Produto 036 -->
+            <div class="produto" data-nome="Natanzinho Lima">
+                <!-- Imagem do produto -->
+                <img src="img/ritmos/natanzinho-lima.webp" alt="Produto">
+                <!-- Nome e preço -->
+                <div class="produto-info">
+                    <p class="titulo">Natanzinho Lima</p>
+                    <p class="preco">R$ 24,90</p>
+                </div>
+                <!-- Botões -->
+                <div class="acoes">
+                    <!-- Botão Play/Pause -->
+                    <button class="btn-play" onclick="tocarOuPausar(this, 'natanzinho-lima')">
+                        <svg class="icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <polygon points="8,5 19,12 8,19"></polygon> <!-- Play -->
+                        </svg>
+                    </button>
+                    <!-- Botão Comprar -->
+                    <button class="btn-comprar"
+                        data-nome="Natanzinho Lima"
+                        data-preco="24,90"
+                        data-teclado="PSR-S-SX-Genos-Tyros"
+                        data-imagem="img/ritmos/natanzinho-lima.webp"
+                        onclick="abrirCheckoutComDados(this)">
+                        Comprar
+                    </button>
+                </div>
+                <!-- Áudio -->
+                <audio id="natanzinho-lima" src="https://dl.dropboxusercontent.com/scl/fi/yw4zmjfb43otvxxnsv8b0/036_Natanzinho_Lima.mp3?rlkey=hd25a7boc4yc51kkev6amqmei&st=f50sxitr&raw=1"></audio>
+            </div>
+
             <!-- Produto 035 -->
             <div class="produto" data-nome="Kara Veia">
                 <!-- Imagem do produto -->
@@ -1253,7 +1284,7 @@
         <p style="color: white;">Página</p>
         <p style="color: yellow;" id="indicador-pagina">1</p>
         <p style="color: white;">de</p>
-        <p style="color: yellow;">2</p>
+        <p style="color: yellow;">3</p>
 
         <button id="btn-proximo" style="cursor: pointer;  background-color: black; border: black; color: white;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24"height="24" fill="currentColor"
