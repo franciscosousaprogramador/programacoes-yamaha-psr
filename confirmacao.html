@@ -119,6 +119,8 @@
             "bregadeira",
             "brega mix",
             "forro das antigas",
+            "forrozao",
+            "xote brasilia",
             "xote das antigas",
 
             //Ritmo PSR SX600 Adaptados Para Linha E-EW
@@ -161,6 +163,7 @@
             "arrocha paredao",
             "forro paredao 2",
             "forrozao",
+            "guarania",
             "piseiro paredao",
             "xote pd serra",
         ];
@@ -183,8 +186,12 @@
         ];  
         
         const produtosPix74_00 = [
-            "pack 15 ritmos pro-level e"
+            
         ];
+
+        const produtosPix97_00 = [
+            "pack 20 ritmos pro-level e"
+        ]
 
         const codigoPix9_90 = "00020126580014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a52040000530398654049.905802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510NjrZO4a9oe630467D4";
 
@@ -197,6 +204,8 @@
         const codigoPix67_00 = "00020126810014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a0219PACK Sample 2026 V1520400005303986540567.005802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510Ig74DH4yE963041CC1";
 
         const codigoPix74_00 = "00020126850014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a0223Pack Ritmos PRO-LEVEL E520400005303986540574.005802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510Lk7TSfkMcr6304F42D";
+
+        const codigoPix97_00 = "00020126900014BR.GOV.BCB.PIX01367046aeea-f9b0-4772-b448-214476fabb7a0228Pack PRO-LEVEL E - 20 Ritmos520400005303986540597.005802BR5925Francisco de Sousa Tavare6009SAO PAULO62140510LjKkbRIwlR6304866B";
         
         let codigoPix = "Código não encontrado";
         if (produtosPix9_90.includes(produtoNormalizado)) {
@@ -216,6 +225,9 @@
         }else
         if (produtosPix74_00.includes(produtoNormalizado)) {
             codigoPix = codigoPix74_00; 
+        }else
+        if (produtosPix97_00.includes(produtoNormalizado)) {
+            codigoPix = codigoPix97_00;
         }
 
         document.getElementById('codigo-pix').textContent = codigoPix;
